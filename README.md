@@ -1,9 +1,22 @@
 # Become a Software Professional 2023
 
-This project is about a website for a gym called MegaRocket showing all its features and style.
-
+>This project is about a website for a gym called MegaRocket showing all its features and style.
 
 ## Week 01
+On this week we had to create the screenflows of the project on FIGMA. My team worked on Super Admin section.
+
+Summary:
+- Divide into teams and each team has a section to work on
+- Create the screens 
+- Create the flow with the screens 
+- Show the screens to our tutors to verify the project
+- Apply the corrections
+- Finish the screenflow
+
+## Week 02
+On this week I made the folder with the HTML and README files to start the project and push it to github.
+
+Summary:
 - Create the repository that will contain the project
 - Create the folders with the index and README files
 - Create a folder to locate the images

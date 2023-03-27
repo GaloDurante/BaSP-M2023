@@ -7,58 +7,79 @@
     <script src="https://kit.fontawesome.com/22526762ca.js" crossorigin="anonymous"></script>
     <title>Mega Rocket</title>
 </head>
-<body>
-    
+<body>  
     <header>
-        <img src="images/logo-mega-rocket.png"/>
+        <img src="images/logo-mega-rocket.png" alt="logo mega rocket"/>
     </header>
 
     <!-- SIDEBAR -->
-    <section>
-        
+    <aside>
+        <nav>   
+            <ul>
+                <li>
+                    <a href="#home">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fa-solid fa-user-plus"></i> Sign Up
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In
+                    </a>
+                </li>
+            </ul>
+        </nav>   
         <ul>
+            <h2>
+                Contact Information
+            </h2>
             <li>
-                <a href="#home"><i class="fas fa-home"></i> Home</a>
+                <a>
+                    <i class="far fa-envelope"></i> information@intitled.tld
+                </a>
             </li>
             <li>
-                <a><i class="fa-solid fa-user-plus"></i> Sign Up</a>
+                <a>
+                    <i class="fa-solid fa-phone"></i> (000) 000-0000
+                </a>
             </li>
             <li>
-                <a><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In</a>
+                <a>
+                    <i class="fas fa-home"></i> 1234 Somewhere Road #8254 Nashvolle, TN
+                </a>
             </li>
-        </ul>
+        </ul> 
+    </aside>
 
-        <ul>
-            <label>Contact Information</label>
-            <li>
-                <a><i class="far fa-envelope"></i> information@intitled.tld</a>
-            </li>
-            <li>
-                <a><i class="fa-solid fa-phone"></i> (000) 000-0000</a>
-            </li>
-            <li>
-                <a><i class="fas fa-home"></i> 1234 Somewhere Road #8254 Nashvolle, TN</a>
-            </li>
-        </ul>
-    </section>
-
-    <!-- HOME-->
+    <!-- HOME -->
     <section id="home">
-        <h1>MEGA ROCKET WEB</h1>
-        <p>welcome</p>
+        <h1>
+            MEGA ROCKET WEB
+        </h1>
+        <p>
+            welcome
+        </p>
         <p>
             Mega Rocket web is a monthly management system for members and trainers so
             that they can dynamically sign up for their activities in the gym.
         </p>
-        <img src="images/gym-home.png"/>
+        <img src="images/gym-home.png" alt="imagen del gimnasio"/>
     </section>
 
-    <!-- FEATURES-->
+    <!-- FEATURES -->
     <section>
-       <h2>Features</h2>
+       <h2>
+        Features
+    </h2>
         <div class="container">
             <div>
-                <h3><i class="fa-regular fa-clock"></i> Shift Reservations</h3>
+                <h3>
+                    <i class="fa-regular fa-clock"></i> Shift Reservations
+                </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum, 
                     corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
@@ -66,7 +87,9 @@
                 </p>
             </div>
             <div>
-                <h3><i class="far fa-calendar-alt"></i> Scheduling y Opening Hours</h3>
+                <h3>
+                    <i class="far fa-calendar-alt"></i> Scheduling y Opening Hours
+                </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum, 
                     corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
@@ -74,7 +97,9 @@
                 </p>
             </div>
             <div>
-                <h3><i class="fa-regular fa-calendar-check"></i> Membership Management</h3>
+                <h3>
+                    <i class="fa-regular fa-calendar-check"></i> Membership Management
+                </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum, 
                     corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
@@ -82,7 +107,9 @@
                 </p>
             </div>
             <div>
-                <h3><i class="far fa-envelope"></i> Contact Form y Suggestions</h3>
+                <h3>
+                    <i class="far fa-envelope"></i> Contact Form y Suggestions
+                </h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum, 
                     corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
@@ -92,11 +119,13 @@
         </div>
     </section>
 
-    <!-- ABOUT-->
+    <!-- ABOUT -->
     <section>
-        <h2>Abour Mega Rocket</h2>
+        <h2>
+            About Mega Rocket
+        </h2>
         <div>
-            <img src="images/gym-about.png"/>
+            <img src="images/gym-about.png" alt="imagen del gimnasio"/>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem voluptatum
                 temporibus illo expedita laudantium perferendis suscipit esse voluptate id aspernatur
@@ -115,90 +144,172 @@
                 dolores impedit velit animi error sequi, officiis numquam sed, cupiditate obcaecati 
                 doloribus. Necessitatibus aliquam rerum maxime? Fugiat, blanditiis at!
             </p>
-            <img src="images/gym-about2.png"/>
+            <img src="images/gym-about2.png" alt="imagen del gimnasio"/>
         </div>
     </section>
 
     <!-- CONTACT -->
     <section>
-        <h2>Get in touch</h2>
+        <h2>
+            Get in touch
+        </h2>
         <form>
-            <label>First name</label>
-            <input type="text" placeholder="Enter name" required minlength="3">
+            <label for="name">
+                First name
+            </label>
+            <input id="name" type="text" placeholder="Enter name" required minlength="3">
 
-            <label>Last name</label>
-            <input type="text" placeholder="Enter last name" required minlength="3">
+            <label for="surname">
+                Last name
+            </label>
+            <input id="surname" type="text" placeholder="Enter last name" required minlength="3">
 
-            <label>Email address</label>
-            <input type="email" placeholder="Enter email" required minlength="10">
-            <select required>
-                <option disabled selected>Select one option</option>
-                <option>I want to make a claim</option>
-                <option>I want to realize a query or suggestion</option>
-                <option>I want to know the memberships and cost</option>
+            <label for="email">
+                Email address
+            </label>
+            <input id="email" type="email" placeholder="Enter email" required minlength="10">
+            
+            <label for="select">
+                Contact reason
+            </label>
+            <select id="select" required>
+                <option disabled selected>
+                    Choose contact reason
+                </option>
+                <option value="I want to make a claim">
+                    I want to make a claim
+                </option>
+                <option value="I want to realize a query or suggestion">
+                    I want to realize a query or suggestion
+                </option>
+                <option value="I want to know the memberships and cost">
+                    I want to know the memberships and cost
+                </option>
             </select>
-            <textarea placeholder="Enter your message"></textarea>
-            <button type="submit">Submit</button>
+            <label for="message">
+                Message
+            </label>
+            <textarea id="message" placeholder="Enter your message"></textarea>
+            <button type="submit">
+                Submit
+            </button>
         </form>
     </section>
 
     <!-- ACTIVITIES -->
     <section>
-        <h2>Gym activities</h2>
+        <h2>
+            Gym activities
+        </h2>
         <ul>
-            <li>Crossfit</li>
-            <li>Spinning</li>
-            <li>Functional</li>
-            <li>Fitness</li>
-            <li>Boxing</li>
+            <li>
+                Crossfit
+            </li>
+            <li>
+                Spinning
+            </li>
+            <li>
+                Functional
+            </li>
+            <li>
+                Fitness
+            </li>
+            <li>
+                Boxing
+            </li>
         </ul>
-        <img src="images/gym-activities.png"/>
+        <img src="images/gym-activities.png" alt="imagen del gimnasio"/>
     </section>
 
     <!-- MEMBERSHIPS -->
     <section>
-        <h2>Memberships</h2>
+        <h2>
+            Memberships
+        </h2>
         <table>
             <tr>
                 <th></th>
-                <th>Only classes</th>
-                <th>Classic</th>
-                <th>Black</th>
+                <th>
+                    Only classes
+                </th>
+                <th>
+                    Classic
+                </th>
+                <th>
+                    Black
+                </th>
             </tr>
             <tr>
-                <td>Free acces to the fitness room</td>
-                <td><i class="fas fa-times"></i></td>
-                <td><i class="fas fa-check"></i></td>
-                <td><i class="fas fa-check"></i></td>
+                <td>
+                    Free acces to the fitness room
+                </td>
+                <td>
+                    <i class="fas fa-times"></i>
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
             </tr>
             <tr>
-                <td>Free acces to classes prior enrollment</td>
-                <td><i class="fas fa-check"></i></td>
-                <td><i class="fas fa-times"></i></td>
-                <td><i class="fas fa-check"></i></td>
+                <td>
+                    Free acces to classes prior enrollment
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
+                <td>
+                    <i class="fas fa-times"></i>
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
             </tr>
             <tr>
-                <td>Personalized follow-up by a trainer</td>
-                <td><i class="fas fa-times"></i></td>
-                <td><i class="fas fa-check"></i></td>
-                <td><i class="fas fa-check"></i></td>
+                <td>
+                    Personalized follow-up by a trainer
+                </td>
+                <td>
+                    <i class="fas fa-times"></i>
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
             </tr>
             <tr>
-                <td>Schedulling visualization</td>
-                <td><i class="fas fa-check"></i></td>
-                <td><i class="fas fa-check"></i></td>
-                <td><i class="fas fa-check"></i></td>
+                <td>
+                    Schedulling visualization
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
+                <td>
+                    <i class="fas fa-check"></i>
+                </td>
             </tr>
         </table>
     </section>
-
     <footer>
-        <a><i class="fab fa-linkedin"></i></a>
-        <a><i class="fab fa-facebook"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <p>Copyright &copy; 2023 Radium Rocket. All rights reserved.</p>
+        <a>
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a>
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a>
+            <i class="fab fa-instagram"></i>
+        </a>
+        <p>
+            Copyright &copy; 2023 Radium Rocket. All rights reserved.
+        </p>
     </footer>
-
-    
 </body>
 </html>
