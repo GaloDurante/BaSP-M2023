@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
         <title>Mega Rocket</title>
     </head>
     <main>
@@ -11,50 +13,49 @@
             <header>
                 <img src="assets/imgs/logo-mega-rocket.png" alt="logo mega rocket"/>
             </header>
-            <!-- SIDEBAR -->
             <aside>
                 <nav>   
                     <ul>
                         <li>
-                            
-                            <a href="#home">
-                                <img src="assets/imgs/i-home.svg">Home
+                            <a class="btn" href="#home">
+                                <img class="nav-img" src="assets/imgs/i-home.svg">Home
                             </a>
                         </li>
                         <li>
-                            <a>
-                                <img src="assets/imgs/i-sign-up.svg">Sign Up
+                            <a class="btn" href="#">
+                                <img class="nav-img" src="assets/imgs/i-sign-up.svg">Sign Up
                             </a>
                         </li>
                         <li>
-                            <a>
-                                <img src="assets/imgs/i-sign-in.svg">Sign In
+                            <a class="btn" href="#">
+                                <img class="nav-img" src="assets/imgs/i-sign-in.svg">Sign In
                             </a>
                         </li>
                     </ul>
-                </nav>   
-                <ul>
+                </nav>
+                <article>
                     <h2>
-                        Contact Information
-                    </h2>
-                    <li>
-                        <a>
-                            <img src="assets/imgs/i-mail.svg">information@intitled.tld
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <img src="assets/imgs/i-phone.svg">(000) 000-0000
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <img src="assets/imgs/i-home.svg">1234 Somewhere Road #8254 Nashvolle, TN
-                        </a>
-                    </li>
-                </ul> 
+                        Contact information
+                    </h2>   
+                    <ul class="aside-ul">
+                        <li>
+                            <a>
+                                <img class="nav-img" src="assets/imgs/i-mail.svg">information@intitled.tld
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="nav-img" src="assets/imgs/i-phone.svg">(000) 000-0000
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img class="nav-img" src="assets/imgs/i-home.svg">1234 Somewhere Road #8254 Nashvolle, TN
+                            </a>
+                        </li>
+                    </ul>
+                </article> 
             </aside>
-            <!-- HOME -->
             <section id="home">
                 <h1>
                     MEGA ROCKET WEB
@@ -68,13 +69,12 @@
                 </p>
                 <img src="assets/imgs/gym-home.png" alt="imagen del gimnasio"/>
             </section>
-            <!-- FEATURES -->
-            <section>
+            <section id="features">
             <h2>
                 Features
             </h2>
                 <div class="container">
-                    <div>
+                    <article>
                         <h3>
                             <img src="assets/imgs/i-reservation.svg">Shift Reservations
                         </h3>
@@ -83,8 +83,8 @@
                             corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
                             sit excepturi vero? Facilis totam consequuntur et. Inventore iure quasi
                         </p>
-                    </div>
-                    <div>
+                    </article>
+                    <article>
                         <h3>
                             <img src="assets/imgs/i-scheduling.svg">Scheduling y Opening Hours
                         </h3>
@@ -93,8 +93,8 @@
                             corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
                             sit excepturi vero? Facilis totam consequuntur et. Inventore iure quasi
                         </p>
-                    </div>
-                    <div>
+                    </article>
+                    <article>
                         <h3>
                             <img src="assets/imgs/i-management.svg">Membership Management
                         </h3>
@@ -103,8 +103,8 @@
                             corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
                             sit excepturi vero? Facilis totam consequuntur et. Inventore iure quasi
                         </p>
-                    </div>
-                    <div>
+                    </article>
+                    <article>
                         <h3>
                             <img src="assets/imgs/i-mail-features.svg">Contact Form y Suggestions
                         </h3>
@@ -113,15 +113,14 @@
                             corrupti perspiciatis quasi voluptatum quaerat cumque recusandae rem accusantium
                             sit excepturi vero? Facilis totam consequuntur et. Inventore iure quasi
                         </p>
-                    </div>
+                    </article>
                 </div>
             </section>
-            <!-- ABOUT -->
-            <section>
+            <section id="about">
                 <h2>
                     About Mega Rocket
                 </h2>
-                <div>
+                <article>
                     <img src="assets/imgs/gym-about.png" alt="imagen del gimnasio"/>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem voluptatum
@@ -131,8 +130,8 @@
                         dolores impedit velit animi error sequi, officiis numquam sed, cupiditate obcaecati 
                         doloribus. Necessitatibus aliquam rerum maxime? Fugiat, blanditiis at!
                     </p>
-                </div>
-                <div>
+                </article>
+                <article>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem voluptatum
                         temporibus illo expedita laudantium perferendis suscipit esse voluptate id aspernatur
@@ -142,10 +141,9 @@
                         doloribus. Necessitatibus aliquam rerum maxime? Fugiat, blanditiis at!
                     </p>
                     <img src="assets/imgs/gym-about2.png" alt="imagen del gimnasio"/>
-                </div>
+                </article>
             </section>
-            <!-- CONTACT -->
-            <section>
+            <section id="contact">
                 <h2>
                     Get in touch
                 </h2>
@@ -191,8 +189,7 @@
                     </button>
                 </form>
             </section>
-            <!-- ACTIVITIES -->
-            <section>
+            <section id="activities">
                 <h2>
                     Gym activities
                 </h2>
@@ -215,8 +212,7 @@
                 </ul>
                 <img src="assets/imgs/gym-activities.png" alt="imagen del gimnasio"/>
             </section>
-            <!-- MEMBERSHIPS -->
-            <section>
+            <section id="memberships">
                 <h2>
                     Memberships
                 </h2>
