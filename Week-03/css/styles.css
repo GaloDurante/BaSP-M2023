@@ -2,6 +2,20 @@
 
 *{
     font-family: 'Roboto', sans-serif;
+    color: #373867;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #49A37B;
+    text-underline-offset: 10px;
+
+}
+p{
+    font-size: 20px;
 }
 
 header{
@@ -27,7 +41,7 @@ nav ul{
     padding-right: 40px;
 }
 nav ul li{
-    padding-top: 25px;
+    margin-top: 25px;
     list-style: none;
 }
 
@@ -35,8 +49,87 @@ nav ul li a{
     display: block;
 }
 
+aside article{
+    margin-top: 400px;
+}
+
+aside article h2{
+    text-align: center;
+    color: #fff;
+    text-decoration-color: #fff;
+    font-size: 22px;
+}
+aside article ul li{
+    padding-top: 25px;
+    list-style: none;
+    color: #373867;
+    font-size: 20px;
+}
+
+main{
+    margin-top: 100px;
+    margin-left: 320px;
+}
+
+#home{
+    display: inline-block;
+    margin-top: 55px;
+    margin-left: 350px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+#home article{
+    width: 500px;
+    margin-right: 61px;
+    padding-top: 30px;
+    float: left;
+}
+
+#home article h1{
+    font-size: 45px;
+    color: #373867
+}
+
+#home article .welcome{
+    color: #49A37B;
+    font-size: 30px;
+    margin-top: -30px;
+    text-transform: uppercase;
+}
+#home article p{
+    margin-top: 50px;
+    line-height: 30px;
+}
+
+#features{
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+#features h3{
+    font-size: 25px;
+}
+
+#features article img{
+    margin-right: 20px;
+}
+
+#features article{
+    display: inline-block;
+    width: 550px;
+    margin-left: 180px;
+}
+
+#features article p{
+    width: 450px;
+    margin-left: 65px;
+}
 .nav-img{
     padding-right: 5px;
+}
+
+.nav-img-phone{
+    float: left;
 }
 
 .btn{
@@ -45,25 +138,10 @@ nav ul li a{
     text-align: center;
     background-color: #fff;
     text-decoration: none;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 5px; 
 }
 
-aside article{
-    margin-top: 500px;
-}
-
-aside article h2{
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 2.5px;
-    text-underline-offset: 5px;
-    color: #fff;
-    font-size: 22px;
-}
-aside article ul li{
-    padding-top: 25px;
-    list-style: none;
-    color: #373867;
-    font-size: 20px;
+.btn:hover{
+    color: #49A37B;
 }
