@@ -14,6 +14,7 @@ h2{
     text-underline-offset: 10px;
     margin-top: 64px;
 }
+
 p{
     font-size: 20px;
 }
@@ -36,10 +37,12 @@ aside {
     width: 300px;
     height: 100%;
   }
+
 nav ul{
     margin-top: 0px;
     padding-right: 40px;
 }
+
 nav ul li{
     margin-top: 25px;
     list-style: none;
@@ -49,8 +52,6 @@ nav ul li{
 
 nav ul li a{
     display: block;
-}
-nav ul li img{
 }
 
 aside article{
@@ -63,11 +64,17 @@ aside article h2{
     text-decoration-color: #fff;
     font-size: 22px;
 }
+
+aside article img{
+    margin-right: 0px; 
+}
+
 aside article ul li{
     padding-top: 25px;
     list-style: none;
     color: #373867;
-    font-size: 20px;
+    font-size: 20px; 
+    text-align: left;
 }
 
 main{
@@ -75,71 +82,79 @@ main{
     margin-left: 320px;
 }
 
-#home{
+.home{
     display: inline-block;
     margin-top: 55px;
     margin-left: 350px;
     text-align: center;
 }
-#home article{
+.home article{
     width: 500px;
     margin-right: 61px;
     padding-top: 30px;
     float: left;
 }
 
-#home article h1{
+.home article h1{
     font-size: 45px;
     color: #373867
 }
 
-#home article .welcome{
+.home article .welcome{
     color: #49A37B;
     font-size: 30px;
     margin-top: -30px;
     text-transform: uppercase;
 }
-#home article p{
+.home article p{
     margin-top: 50px;
     line-height: 30px;
 }
 
-#features{
+.features{
     margin-top: 55px;
     margin-bottom: 55px;
 }
 
-#features h3{
+.features h3{
     font-size: 25px;
 }
 
-#features article img{
+.features article img{
     margin-right: 20px;
+    margin-top: 15px;
+    float: left;
 }
 
-#features article{
+.features article{
     display: inline-block;
     width: 550px;
     margin-left: 180px;
 }
 
-#features article p{
-    width: 450px;
+.features article p{
+    width: 420px;
     margin-left: 65px;
+    text-align: justify;
 }
 
-#about article{
+.about article{
     display: inline-block;
     width: 650px; 
     padding-top: 80px;
+    text-align: justify;
 }
 
-#about div{
+.about div{
     margin-left: 250px;
 }
 
-#about article .about-p{
+.about article .about-p{
     margin-left: 50px;
+}
+
+.about article .about-p2{
+    margin-right: 50px;
 }
 
 form{
@@ -164,6 +179,8 @@ form input{
     padding: 5px;
     margin-top: 8px;
     width: 300px;
+    border: 1px solid #373867;
+    border-radius: 3px;
 }
 
 form button{
@@ -200,44 +217,42 @@ form button:hover{
     cursor: pointer;
 }
 
-#activities h2{
+.activities h2{
     margin-bottom: 64px;
 }
 
-#activities ul{
+.activities ul{
     float: left;
     margin-right: 150px;
     margin-left: 450px;
 }
 
-#activities ul li{
+.activities ul li{
     margin-top: 15px;
     font-weight: bold;
     font-size: 20px;
-    
 }
 
-
-#memberships table{
-    margin-left: 390px;
+.memberships table{
+    margin-left: 350px;
     width: 980px;
     border-collapse: collapse;
     margin-top: 62px;
     margin-bottom: 64px;
 }
 
-#memberships table .fila-names{
+.memberships table .fila-names{
     text-align: center;
     background-color: #D9D9D9;
     height: 58px;
 }
 
-#memberships table .fila-2{
+.memberships table .fila-2{
     text-align: center;
     height: 58px;
 }
 
-#memberships table .table-align{
+.memberships table .table-align{
     min-width: 100px; 
 }
 
@@ -248,18 +263,21 @@ footer{
     padding: 12px;
     margin-left: 300px;
 }
+
 footer a{
     margin-left: 10px;
 }
+
 footer a:hover{
     cursor: pointer;
 }
+
 .nav-img{
     padding-right: 5px;
 }
 
 .nav-img-phone{
-    float: left;
+    float:left;
 }
 
 .btn{
