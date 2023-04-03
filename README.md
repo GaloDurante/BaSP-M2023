@@ -26,5 +26,18 @@ Summary:
 - Fill the README with the information
 - Push to github
 
+## Week 03
+On this week I made the folder with the CSS files (styles.css and reset.css) to design all the page
+
+Summary:
+- Create the folders, assets for the images and css for the .css files 
+- Link the .css files to the index to start the design
+- Apply the corrections of the feedback on the index file 
+- Start the code on the styles file
+- Design all the sections and elements 
+- Finish the landing page
+- Fill the README with the information
+- Push to github
+
 ## Author
 Galo Durante
