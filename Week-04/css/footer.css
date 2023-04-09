@@ -1,0 +1,15 @@
+footer {
+    height: 72px;
+    padding: 12px;
+    margin-left: 300px;
+    background-color: #AACE9B;
+    text-align: center;
+}
+
+footer a {
+    margin-left: 10px;
+}
+
+footer a:hover {
+    cursor: pointer;
+}
