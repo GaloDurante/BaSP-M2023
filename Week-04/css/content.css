@@ -1,37 +1,34 @@
-main {
-    margin-top: 100px;
-    margin-left: 320px;
-}
 
 .home {
-    display: inline-block;
-    margin-top: 55px;
-    margin-left: 350px;
     text-align: center;
 }
 
 .home article {
-    float: left;
-    width: 500px;
-    margin-right: 61px;
     padding-top: 30px;
 }
 
 .home article h1 {
-    font-size: 45px;
+    padding-top: 50px;
+    font-size: 30px;
     color: #373867
 }
 
 .home article .welcome {
-    margin-top: -30px;
+    margin-top: -15px;
     text-transform: uppercase;
     color: #49A37B;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .home article p {
-    margin-top: 50px;
-    line-height: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.home img{
+    width: 90%;
+    height: 50%;
 }
 
 .features {
@@ -40,55 +37,67 @@ main {
 }
 
 .features h3 {
-    font-size: 25px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.features-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.features-flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px
 }
 
 .features article img {
-    float: left;
-    margin-right: 20px;
-    margin-top: 15px;    
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 26px;
+    height: 26px;    
 }
 
 .features article {
-    display: inline-block;
-    width: 550px;
-    margin-left: 180px;
+    display: flex;
+    flex-direction: column;
 }
 
 .features article p {
-    width: 420px;
-    margin-left: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: justify;
 }
 
 .about article {
-    display: inline-block;
-    width: 650px; 
     padding-top: 80px;
     text-align: justify;
 }
 
 .about div {
-    margin-left: 250px;
+}
+
+.about div img{
+    width: 300px;
+    height: 200px;
 }
 
 .about article .about-p {
-    margin-left: 50px;
+    
 }
 
 .about article .about-p2 {
-    margin-right: 50px;
+   
 }
 
 form {
-    display: inline;
-    margin-left: 400px;
+    
 }
 
 form .contact {
-    float: left;
-    margin-right: 100px;
-    margin-left: 450px;
+    
 }
 
 form label {
@@ -145,9 +154,7 @@ form button:hover {
 }
 
 .activities ul {
-    float: left;
-    margin-right: 150px;
-    margin-left: 450px;
+    
 }
 
 .activities ul li {
@@ -156,9 +163,12 @@ form button:hover {
     font-size: 20px;
 }
 
+.activities img{
+    width: 300px;
+    height: 200px;
+}
+
 .memberships table {
-    width: 980px;
-    margin-left: 350px;
     margin-top: 62px;
     margin-bottom: 64px;
     border-collapse: collapse;
