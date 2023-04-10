@@ -140,9 +140,9 @@
                     About Mega Rocket
                 </h2>
                 <div class="about-container">
-                    <img src="/assets/imgs/gym-about.png" alt="imagen del gimnasio"/>
-                    <article>
-                        <p class="about-p">
+                    <article class="about-flex">
+                        <img src="/assets/imgs/gym-about.png" alt="imagen del gimnasio"/>
+                        <p>
                             MESSI ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem voluptatum
                             temporibus illo expedita laudantium perferendis suscipit esse voluptate id aspernatur
                             pariatur maxime voluptates nam dolore, sunt doloribus eligendi molestiae?
@@ -151,8 +151,9 @@
                             doloribus. Necessitatibus aliquam rerum maxime? Fugiat, blanditiis at!
                         </p>
                     </article>
-                    <article>
-                        <p class="about-p2">
+                    <article class="about-flex">
+                        <img src="/assets/imgs/gym-about2.png" alt="imagen del gimnasio"/>
+                        <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem voluptatum
                             temporibus illo expedita laudantium perferendis suscipit esse voluptate id aspernatur
                             pariatur maxime voluptates nam dolore, sunt doloribus eligendi molestiae?
@@ -161,7 +162,6 @@
                             doloribus. Necessitatibus aliquam rerum maxime? Fugiat, blanditiis at!
                         </p>
                     </article>
-                    <img src="/assets/imgs/gym-about2.png" alt="imagen del gimnasio"/>
                 </div>
             </section>
             <section class="contact">
@@ -169,24 +169,25 @@
                     Get in touch
                 </h2>
                 <form>
-                    <div class="contact">
+                    <div>
                         <label for="name">
                             First name
                         </label>
                         <input id="name" type="text" placeholder="Enter name" required minlength="3">
+                    </div>
+                    <div>
                         <label for="surname">
                             Last name
                         </label>
                         <input id="surname" type="text" placeholder="Enter last name" required minlength="3">
+                    </div>
+                    <div>
                         <label for="email">
                             Email address
                         </label>
-                        <input id="email" type="email" placeholder="Enter email" required minlength="10">
-                        <button type="submit">
-                            Submit
-                        </button>
+                        <input id="email" type="email" placeholder="Enter email" required minlength="10">    
                     </div>
-                    <div class="contact-2">
+                    <div>
                         <label for="select">
                             Contact reason
                         </label>
@@ -204,35 +205,42 @@
                                 I want to know the memberships and cost
                             </option>
                         </select>
+                    </div>
+                    <div>
                         <label for="message">
                             Message
                         </label>
-                        <textarea id="message" placeholder="Enter your message"></textarea>
-                    </div> 
+                        <textarea id="message" placeholder="Enter your message"></textarea>    
+                    </div>
+                    <button type="submit">
+                        Submit
+                    </button>
                 </form>
             </section>
             <section class="activities">
                 <h2>
                     Gym activities
                 </h2>
-                <ul>
-                    <li>
-                        Crossfit
-                    </li>
-                    <li>
-                        Spinning
-                    </li>
-                    <li>
-                        Functional
-                    </li>
-                    <li>
-                        Fitness
-                    </li>
-                    <li>
-                        Boxing
-                    </li>
-                </ul>
-                <img src="/assets/imgs/gym-activities.png" alt="imagen del gimnasio"/>
+                <div class="activities-container">
+                    <ul>
+                        <li>
+                            Crossfit
+                        </li>
+                        <li>
+                            Spinning
+                        </li>
+                        <li>
+                            Functional
+                        </li>
+                        <li>
+                            Fitness
+                        </li>
+                        <li>
+                            Boxing
+                        </li>
+                    </ul>
+                    <img src="/assets/imgs/gym-activities.png" alt="imagen del gimnasio"/>    
+                </div>
             </section>
             <section class="memberships">
                 <h2>
