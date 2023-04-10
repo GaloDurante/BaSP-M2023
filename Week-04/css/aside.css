@@ -1,47 +1,57 @@
 aside {
     display: none;
-    position: fixed;
-    top: 85px;
-    width: 300px;
-    height: 100%;
-    background-color: #AACE9B;
   }
 
-nav ul {
-    margin-top: 0px;
-    padding-right: 40px;
-}
+@media only screen and (min-width: 1025px){
 
-nav ul li {
-    margin-top: 25px;
-    list-style: none;
-    font-weight: bold;
-    font-size: 20px;
-}
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 70px;
+        width: 300px;
+        height: 93%;
+        padding: 30px;
+        background-color: #AACE9B;
+      }
+    
+    nav ul li {
+        margin-bottom: 10px;
+        list-style: none;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    nav ul li a {
+        display: flex;
+    }
+    
+    aside article h2 {
+        text-align: center;
+        color: #fff;
+        text-decoration-color: #fff;
+        font-size: 22px;
+    }
 
-nav ul li a {
-    display: block;
-}
+    .aside-ul{
+        display: block;
+    }
+    
+    aside article ul li {
+        display: flex;
+        padding-top: 25px;
+        color: #373867;
+        list-style: none;
+        font-size: 20px; 
+    }
 
-aside article {
-    margin-top: 400px;
-}
+    .aside-ul a {
+        margin-left: 10px;
+    }
 
-aside article h2 {
-    text-align: center;
-    color: #fff;
-    text-decoration-color: #fff;
-    font-size: 22px;
-}
-
-aside article img {
-    margin-right: 0px; 
-}
-
-aside article ul li {
-    padding-top: 25px;
-    color: #373867;
-    list-style: none;
-    font-size: 20px; 
-    text-align: left;
+    .nav-img-phone{
+        margin-left: -5px;
+    }
 }

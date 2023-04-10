@@ -15,3 +15,7 @@ header {
 .header-img-menu{
     margin-right: 25px;
 }
+
+.header-img-menu:hover{
+    cursor: pointer;
+}

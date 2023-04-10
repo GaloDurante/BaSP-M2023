@@ -204,6 +204,7 @@ form button:hover {
     width: 90%;
     border-collapse: collapse;
     font-size: 12px;
+    font-weight: bold;
 }
 
 .memberships table .fila-names {
@@ -329,8 +330,100 @@ form button:hover {
         display: flex;
         justify-content: end;
     }
+
+    .activities-container{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0;  
+    }
+
+    .activities ul {
+        display: block;
+        padding-left: 19px;
+       
+    }
+
+    .activities ul li{
+        padding-right: 0;
+        font-size: 20px;
+        list-style: disc;
+    }
+
+    .activities img{
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 350px;
+        height: 145px;
+        margin-left: 100px;
+    }
+
+    .memberships table {
+        max-width: 800px;
+    }
 }
 
 @media only screen and (min-width: 1025px){
 
+    .header-img-menu{
+        display: none;
+    }
+
+    .main-container{
+        margin-left: 300px;
+    }
+
+    .home{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .home article{
+        max-width: 700px;
+    }
+
+    .features-container{
+        max-width: 1100px;
+    }
+
+    .features article h3{
+        font-size: 24px;
+    }
+
+    .features article p{
+        font-size: 20px;
+        padding: 20px 55px;
+    }
+
+    .about{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .about-flex p{
+        font-size: 20px !important;
+    }
+
+    .activities ul li{
+        font-size: 23px;
+    }
+
+    .activities img{
+        width: 50%;
+        max-width: 600px;
+        height: 245px;
+    }
+
+    .memberships table{
+        max-width: 1100px;
+        font-size: 15px; 
+    }
+
+    .memberships table .fila-names {
+        height: 50px;
+    }
+    
+    .memberships table .fila-2 {
+        height: 50px; 
+    }
 }
