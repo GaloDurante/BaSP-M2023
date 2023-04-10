@@ -27,7 +27,7 @@ Summary:
 - Push to github
 
 ## Week 03
-On this week I made the folder with the CSS files (styles.css and reset.css) to design all the page
+On this week I made the folder with the CSS files (styles.css and reset.css) to design all the page.
 
 Summary:
 - Create the folders, assets for the images and css for the .css files 
@@ -36,6 +36,18 @@ Summary:
 - Start the code on the styles file
 - Design all the sections and elements 
 - Finish the landing page
+- Fill the README with the information
+- Push to github
+
+## Week 04
+On this week I made the responsive design for the page using flexbox and media queries.
+
+Summary:
+- Create the folder "Week-04"
+- Create separate css files and link it to the index to start the design
+- Design all the sections and elements using responsive design
+- Finish the landing page
+- Create a repository to use Github pages
 - Fill the README with the information
 - Push to github
 
