@@ -140,26 +140,20 @@
                     About Mega Rocket
                 </h2>
                 <div class="about-container">
-                    <article class="about-flex">
+                    <article class="about-flex flex-1">
                         <img src="/assets/imgs/gym-about.png" alt="imagen del gimnasio"/>
                         <p>
                             MESSI ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem voluptatum
                             temporibus illo expedita laudantium perferendis suscipit esse voluptate id aspernatur
                             pariatur maxime voluptates nam dolore, sunt doloribus eligendi molestiae?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam aspernatur
-                            dolores impedit velit animi error sequi, officiis numquam sed, cupiditate obcaecati 
-                            doloribus. Necessitatibus aliquam rerum maxime? Fugiat, blanditiis at!
                         </p>
                     </article>
-                    <article class="about-flex">
+                    <article class="about-flex flex-2">
                         <img src="/assets/imgs/gym-about2.png" alt="imagen del gimnasio"/>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem voluptatum
                             temporibus illo expedita laudantium perferendis suscipit esse voluptate id aspernatur
                             pariatur maxime voluptates nam dolore, sunt doloribus eligendi molestiae?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam aspernatur
-                            dolores impedit velit animi error sequi, officiis numquam sed, cupiditate obcaecati 
-                            doloribus. Necessitatibus aliquam rerum maxime? Fugiat, blanditiis at!
                         </p>
                     </article>
                 </div>
@@ -169,52 +163,58 @@
                     Get in touch
                 </h2>
                 <form>
-                    <div>
-                        <label for="name">
-                            First name
-                        </label>
-                        <input id="name" type="text" placeholder="Enter name" required minlength="3">
+                    <div class="form-container-1">
+                        <div>
+                            <label for="name">
+                                First name
+                            </label>
+                            <input id="name" type="text" placeholder="Enter name" required minlength="3">
+                        </div>
+                        <div>
+                            <label for="surname">
+                                Last name
+                            </label>
+                            <input id="surname" type="text" placeholder="Enter last name" required minlength="3">
+                        </div>
+                        <div>
+                            <label for="email">
+                                Email address
+                            </label>
+                            <input id="email" type="email" placeholder="Enter email" required minlength="10">    
+                        </div>
                     </div>
-                    <div>
-                        <label for="surname">
-                            Last name
-                        </label>
-                        <input id="surname" type="text" placeholder="Enter last name" required minlength="3">
+                    <div class="form-container-2">
+                        <div>
+                            <label for="select">
+                                Contact reason
+                            </label>
+                            <select id="select" required>
+                                <option disabled selected>
+                                    Choose contact reason
+                                </option>
+                                <option value="I want to make a claim">
+                                    I want to make a claim
+                                </option>
+                                <option value="I want to realize a query or suggestion">
+                                    I want to realize a query or suggestion
+                                </option>
+                                <option value="I want to know the memberships and cost">
+                                    I want to know the memberships and cost
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-textarea">
+                            <label for="message">
+                                Message
+                            </label>
+                            <textarea id="message" placeholder="Enter your message"></textarea>    
+                        </div>
+                        <div class="form-button">
+                            <button type="submit">
+                                Submit
+                            </button>
+                        </div>
                     </div>
-                    <div>
-                        <label for="email">
-                            Email address
-                        </label>
-                        <input id="email" type="email" placeholder="Enter email" required minlength="10">    
-                    </div>
-                    <div>
-                        <label for="select">
-                            Contact reason
-                        </label>
-                        <select id="select" required>
-                            <option disabled selected>
-                                Choose contact reason
-                            </option>
-                            <option value="I want to make a claim">
-                                I want to make a claim
-                            </option>
-                            <option value="I want to realize a query or suggestion">
-                                I want to realize a query or suggestion
-                            </option>
-                            <option value="I want to know the memberships and cost">
-                                I want to know the memberships and cost
-                            </option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message">
-                            Message
-                        </label>
-                        <textarea id="message" placeholder="Enter your message"></textarea>    
-                    </div>
-                    <button type="submit">
-                        Submit
-                    </button>
                 </form>
             </section>
             <section class="activities">
