@@ -107,11 +107,16 @@
 .about p {
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 39px;
     font-size: 15px;
 }
 
-.contact h2{
+.about .button {
+    margin-top: 20px;
+    margin-bottom: 39px;
+    width: 103px;
+}
+
+.contact h2 {
     margin-bottom: 25px;
 }
 
@@ -137,15 +142,13 @@ form input {
     border-radius: 3px;
 }
 
-form button {
-    display: block;
-    margin-top: 20px;
-    width: 100px;
-    padding: 10px;
-    background-color: #AACE9B;
-    border: 1px solid #AACE9B;
-    border-radius: 5px;
-    transition: 0.3s ease-in-out;
+.form-btn-1 {
+    display: none;
+}
+
+.form-button {
+    display: flex;
+    justify-content: end;
 }
 
 form select {
@@ -161,17 +164,12 @@ form textarea {
     height: 165px;
 }
 
-form button:hover {
-    background-color: #fff;
-    color: #AACE9B;
-    cursor: pointer;
-}
 
 .activities h2 {
     margin-bottom: 35px;
 }
 
-.activities-container{
+.activities-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,7 +191,7 @@ form button:hover {
     list-style: none;
 }
 
-.activities img{
+.activities img {
     margin-bottom: 30px;
     margin-top: 20px;
     width: 90%;
@@ -222,86 +220,90 @@ form button:hover {
     min-width: 45px; 
 }
 
-@media only screen and (min-width: 601px){
+@media only screen and (min-width: 601px) {
 
-    main{
+    main {
         margin-top: 90px;
     }
 
-    .home{
+    .home {
         display: flex;
         align-items: center;
         padding: 15px;
     }
 
-    .home h1{
+    .home h1 {
         font-size: 40px;
     }
 
-    .home article{
+    .home article {
         margin-top: -70px;
     }
 
-    .home img{
+    .home img {
         width: 45%;
         height: 290px;
     }
 
-    .features{
+    .features {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .features article img{
+    .features article img {
         margin-left: 20px;
     }
 
-    .features-container{
+    .features-container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         max-width: 95%;
     }
 
-    .features article{
+    .features article {
         max-width: 50%;
     }
 
-    .about-container{
+    .about-container {
         width: 95%;
         margin: 30px auto;
     }
 
-    .about-flex{
+    .about-flex {
         flex-direction: row;
     }
 
-    .flex-1 img{
+    .flex-1 img {
         margin-right: 16%;
     }
 
-    .flex-2{
+    .flex-2 {
         flex-direction: row-reverse;
     }
 
-    .flex-2 img{
+    .flex-2 img {
         margin-left: 16%;
     }
 
-    .about article img{
+    .about article img {
         width: 42%;
     }
 
-    .about article p{
+    .about article p {
         width: 100%;
-        font-size: 15px;
         margin: 0 auto;
         padding-right: 0;
         padding-left: 0;
+        font-size: 15px;
     }
 
-    form{
+    .about .button {
+        display: none;
+    }
+
+    form {
         flex-direction: row;
         align-items: start;
         justify-content: center;
@@ -309,29 +311,32 @@ form button:hover {
         padding: 20px;
     }
 
-    form input{
+    form input {
         width: 250px; 
         margin-right: 30px;
     }
 
-    form select{
+    .form-btn-1 {
+        display: block;
+    }
+
+    .form-button button {
+        display: none;
+    }
+
+    form select {
         width: 250px;
     }
 
-    form textarea{
+    form textarea {
         width: 250px;
     }
 
-    .form-textarea{
+    .form-textarea {
         margin-top: -23px;
     }
 
-    .form-button{
-        display: flex;
-        justify-content: end;
-    }
-
-    .activities-container{
+    .activities-container {
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -344,13 +349,13 @@ form button:hover {
        
     }
 
-    .activities ul li{
+    .activities ul li {
         padding-right: 0;
         font-size: 20px;
         list-style: disc;
     }
 
-    .activities img{
+    .activities img {
         margin-top: 0;
         margin-bottom: 0;
         max-width: 350px;
@@ -363,58 +368,58 @@ form button:hover {
     }
 }
 
-@media only screen and (min-width: 1025px){
+@media only screen and (min-width: 1025px) {
 
-    .header-img-menu{
+    .header-img-menu {
         display: none;
     }
 
-    .main-container{
+    .main-container {
         margin-left: 300px;
     }
 
-    .home{
+    .home {
         max-width: 1100px;
         margin: 0 auto;
     }
 
-    .home article{
+    .home article {
         max-width: 700px;
     }
 
-    .features-container{
+    .features-container {
         max-width: 1100px;
     }
 
-    .features article h3{
+    .features article h3 {
         font-size: 24px;
     }
 
-    .features article p{
-        font-size: 20px;
+    .features article p {
         padding: 20px 55px;
+        font-size: 20px;
     }
 
-    .about{
+    .about {
         max-width: 1100px;
         margin: 0 auto;
     }
 
-    .about-flex p{
+    .about-flex p {
         font-size: 20px !important;
     }
 
-    .activities ul li{
+    .activities ul li {
         font-size: 23px;
     }
 
-    .activities img{
+    .activities img {
         width: 50%;
         max-width: 600px;
         height: 245px;
     }
 
-    .memberships table{
+    .memberships table {
         max-width: 1100px;
         font-size: 15px; 
     }
