@@ -51,5 +51,17 @@ Summary:
 - Fill the README with the information
 - Push to github
 
+## Week 05
+On this week I made the exercises on JavaScript.
+
+Summary:
+- Create the folder "Week-05"
+- Create the folder exercises and the index file
+- Link all the scripts on the html file
+- Start to solve the exercises
+- Finish the exercises
+- Fill the README with the information
+- Push to github
+
 ## Author
 Galo Durante
