@@ -1,40 +1,39 @@
-console.log('Ejercicio 6');
 console.log('6-a:');
-function suma(num, num2) {
+function add(num, num2) {
     return num + num2;
 }
-var resultado = suma(5,10);
-console.log('El resultado es: ',resultado);
+var result = add(5,10);
+console.log('Result: ',result);
 
 console.log('6-b:');
-function sumaValidacion(num, num2){
+function addValidation(num, num2){
     if (isNaN(num) || isNaN(num2)) {
-        alert('Uno de los parámetros no es un número.');
+        alert('One of the parameters is not a number.');
         return NaN;
       }
       return num + num2;
 }
-resultado = sumaValidacion(10,10);
-console.log('El resultado es: ',resultado);
+result = addValidation(10,10);
+console.log('Result: ',result);
 
 console.log('6-c:');
-function validaInteger(num){
+function validateInteger(num){
     return Number.isInteger(num);
 }
-var bandera = validaInteger('a');
-console.log('Es numero? ',bandera);
+var flag = validateInteger('a');
+console.log('Is integer? ',flag);
 
 console.log('6-d:');
 function addBetter(num, num2){
-    if (!validaInteger(num) || !validaInteger(num2)) {
-        alert("Error: Uno de los números no es un número entero.");
+    if (!validateInteger(num) || !validateInteger(num2)) {
+        alert("Error: One of the numbers is not an integer.");
         num = Math.round(num);
         num2 = Math.round(num2);
       }
       return num + num2;
 }
-resultado = addBetter(4,7);
-console.log('El resultado es: ',resultado);
+result = addBetter(4,7);
+console.log('Result: ',result);
 
 console.log('6-e:');
 function addBetter2(num, num2){
@@ -44,11 +43,11 @@ function addBetter2(num, num2){
 }
 
 function validateRound(num){
-    if (!validaInteger(num)) {
-        alert('Error: Uno de los números no es un número entero.');
+    if (!validateInteger(num)) {
+        alert('Error: One of the numbers is not an integer.');
         num = Math.round(num);
     }
     return num;
 }
-resultado = addBetter2(2.7,7);
-console.log('El resultado es: ',resultado);
+result = addBetter2(3,7);
+console.log('Result: ',result);

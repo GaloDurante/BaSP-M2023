@@ -1,26 +1,25 @@
-console.log('Ejercicio 4');
-console.log('4-a:');
+console.log('4-a: (first alert)');
 var random = Math.random();
 if(random >= 0.5){
-    console.log('Greater than or equal to 0.5');
+    alert('Greater than or equal to 0.5');
 }else{
-    console.log('Lower than 0,5');
+    alert('Lower than 0,5');
 }
 
-console.log('4-b:');
+console.log('4-b: (second alert)');
 var age = 45;
 if (age < 2) {
-    console.log("Bebe");
+    alert("Baby");
   } else if (age >= 2 && age <= 12) {
-    console.log("Niño");
+    alert("Child");
   } else if (age >= 13 && age <= 19) {
-    console.log("Adolescente");
+    alert("Teen");
   } else if (age >= 20 && age <= 30) {
-    console.log("Joven");
+    alert("Young");
   } else if (age >= 31 && age <= 60) {
-    console.log("Adulto");
+    alert("Adult");
   } else if (age >= 61 && age <= 75) {
-    console.log("Adulto mayor");
+    alert("Elderly");
   } else {
-    console.log("Anciano");
+    alert("Old man");
   }

@@ -1,33 +1,32 @@
-console.log('Ejercicio 2');
 console.log('2-a:');
-var cadena = 'tengo mas de diez caracteres';
-console.log('Cadena en mayuscula: ', cadena.toUpperCase());
+var str = 'more than ten characters';
+console.log('String uppercase: ', str.toUpperCase());
 
 console.log('2-b:');
-var cadMenor = cadena.substring(0,5);
-console.log('Primeros cinco caracteres: ',cadMenor);
+var strMin = str.substring(0,5);
+console.log('First five characters: ',strMin);
 
 console.log('2-c:');
-var cadUltimos = cadena.substring(cadena.length-3, cadena.length);
-console.log('Ultimos tres caracteres: ',cadUltimos);
+var strLast = str.substring(str.length-3, str.length);
+console.log('Last three characters: ',strLast);
 
 console.log('2-d:');
-var letraMayus = cadena.substring(0,1).toUpperCase();
-var restoFraseMinus = cadena.substring(1, cadena.length).toLowerCase();
-var frase = letraMayus + restoFraseMinus;
-console.log('Cadena completa: ',frase);
+var letterUp = str.substring(0,1).toUpperCase();
+var restPhrase = str.substring(1, str.length).toLowerCase();
+var phraseComplete = letterUp + restPhrase;
+console.log('Complete phrase: ',phraseComplete);
 
 console.log('2-e:');
-var posicionEspacio = cadena.indexOf(' ');
-console.log('Posicion del primer espacio: ',posicionEspacio);
+var positionSpace = str.indexOf(' ');
+console.log('Position of the first space: ',positionSpace);
 
 console.log('2-f:');
-var palabraLarga = 'contrarrevolucionario anticonstitucionalidad';
-var letraPrimerPalabra = palabraLarga.substring(0,1).toUpperCase();
-var espacio = palabraLarga.indexOf(' ');
-var minusculaPrimerPalabra = palabraLarga.substring(1, espacio).toLowerCase();
-var letraSegundaPalabra = palabraLarga.substring(espacio+1, espacio+2).toUpperCase();
-var minusculaSegundaPalabra = palabraLarga.substring(espacio+2, palabraLarga.length).toLowerCase();
-var fraseCompleta = letraPrimerPalabra + minusculaPrimerPalabra + ' ' + letraSegundaPalabra + minusculaSegundaPalabra;
-console.log('Cadena completa: ',fraseCompleta);
+var strLarge = 'contrarrevolucionario anticonstitucionalidad';
+var letterFirst = strLarge.substring(0,1).toUpperCase();
+var space = strLarge.indexOf(' ');
+var wordFirst = strLarge.substring(1, space).toLowerCase();
+var letterSecond = strLarge.substring(space+1, space+2).toUpperCase();
+var wordSecond = strLarge.substring(space+2, strLarge.length).toLowerCase();
+var phrase = letterFirst + wordFirst + ' ' + letterSecond + wordSecond;
+console.log('Complete phrase: ',phrase);
 
