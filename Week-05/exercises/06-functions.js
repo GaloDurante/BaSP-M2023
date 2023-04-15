@@ -18,9 +18,12 @@ console.log('Result: ',result);
 
 console.log('6-c:');
 function validateInteger(num){
-    return Number.isInteger(num);
+    var flagy = num % 1;
+    if (flagy == 0){
+        return true;
+    } else return false;
 }
-var flag = validateInteger('a');
+var flag = validateInteger(22.2);
 console.log('Is integer? ',flag);
 
 console.log('6-d:');
@@ -49,5 +52,5 @@ function validateRound(num){
     }
     return num;
 }
-result = addBetter2(3,7);
+result = addBetter2(2.5,7);
 console.log('Result: ',result);
