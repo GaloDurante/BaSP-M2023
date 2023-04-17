@@ -18,12 +18,11 @@ console.log('Result: ',result);
 
 console.log('6-c:');
 function validateInteger(num){
-    var flagy = num % 1;
-    if (flagy == 0){
+    if (num % 1 == 0){
         return true;
     } else return false;
 }
-var flag = validateInteger(22.2);
+var flag = validateInteger(22);
 console.log('Is integer? ',flag);
 
 console.log('6-d:');
