@@ -28,23 +28,21 @@ console.log('Is integer? ',flag);
 
 console.log('6-d:');
 function addBetter(num, num2){
-    if (!validateInteger(num) || !validateInteger(num2)) {
+    if (isNaN(num) || isNaN(num2)) {
+        alert('One of the parameters is not a number.');
+        return NaN;
+
+    } else if (!validateInteger(num) || !validateInteger(num2)) {
         alert("Error: One of the numbers is not an integer.");
         num = Math.round(num);
         num2 = Math.round(num2);
       }
-      return num + num2;
+    return num + num2;
 }
 result = addBetter(4,7);
 console.log('Result: ',result);
 
 console.log('6-e:');
-function addBetter2(num, num2){
-    num = validateRound(num);
-    num2 = validateRound(num2)
-    return num + num2;
-}
-
 function validateRound(num){
     if (!validateInteger(num)) {
         alert('Error: One of the numbers is not an integer.');
@@ -52,5 +50,24 @@ function validateRound(num){
     }
     return num;
 }
-result = addBetter2(2.5,7);
+
+function nanValidation(num, num2){
+    if (isNaN(num) || isNaN(num2)) {
+        alert('One of the parameters is not a number.');
+        return NaN;
+      } else {
+        return 1;
+      }  
+}
+function addBetter2(num, num2){
+    var flage = nanValidation(num,num2);
+    if(flage == NaN){
+        return NaN;
+    } else {
+        num = validateRound(num);
+        num2 = validateRound(num2);
+        return num + num2;
+    }
+}
+result = addBetter2('a',7);
 console.log('Result: ',result);
