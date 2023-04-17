@@ -30,7 +30,6 @@ function addBetter(num, num2){
     if (isNaN(num) || isNaN(num2)) {
         alert('One of the parameters is not a number.');
         return NaN;
-
     } else if (!validateInteger(num) || !validateInteger(num2)) {
         alert("Error: One of the numbers is not an integer.");
         num = Math.round(num);
@@ -56,7 +55,7 @@ function nanValidation(num, num2){
         return NaN;
       } else {
         return 1;
-      }  
+      }
 }
 function addBetter2(num, num2){
     var flage = nanValidation(num,num2);

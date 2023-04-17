@@ -7,8 +7,8 @@ On this week we had to create the screenflows of the project on FIGMA. My team w
 
 Summary:
 - Divide into teams and each team has a section to work on
-- Create the screens 
-- Create the flow with the screens 
+- Create the screens
+- Create the flow with the screens
 - Show the screens to our tutors to verify the project
 - Apply the corrections
 - Finish the screenflow
@@ -30,11 +30,11 @@ Summary:
 On this week I made the folder with the CSS files (styles.css and reset.css) to design all the page.
 
 Summary:
-- Create the folders, assets for the images and css for the .css files 
+- Create the folders, assets for the images and css for the .css files
 - Link the .css files to the index to start the design
-- Apply the corrections of the feedback on the index file 
+- Apply the corrections of the feedback on the index file
 - Start the code on the styles file
-- Design all the sections and elements 
+- Design all the sections and elements
 - Finish the landing page
 - Fill the README with the information
 - Push to github

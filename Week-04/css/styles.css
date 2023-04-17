@@ -11,7 +11,7 @@ h2 {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: #49A37B;
-    text-underline-offset: 10px;  
+    text-underline-offset: 10px;
 }
 
 p {
@@ -27,7 +27,7 @@ p {
     background-color: #fff;
     color: #373867;
     border: 1.5px solid black;
-    border-radius: 5px; 
+    border-radius: 5px;
     text-align: center;
     text-decoration: none;
 }
