@@ -1,0 +1,89 @@
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    height: 85vh;
+}
+
+.form-sign-in h2 {
+    text-decoration: none;
+}
+
+form {
+    flex-direction: column;
+}
+
+.checkbox-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.check[type="checkbox"] {
+    height: 20px;
+    margin-left: -290px;
+}
+
+.checkbox-form p {
+    height: 20px;
+    margin-top: 3px;
+    margin-left: -130px;
+}
+
+.forgot-sing-in {
+    margin: 20vh auto 0vh;
+}
+
+.forgot-sing-in a {
+    text-decoration: none;
+}
+
+.btn-sign-in {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 601px) {
+
+    .form-sign-in h2 {
+        margin-left: -20px;
+    }
+
+    .form-sign-in {
+        margin: 0 auto;
+    }
+
+    .form-sign-in input {
+        width: 300px;
+    }
+
+    .form-sign-in form {
+        max-width: 600px;
+    }
+
+    .form-button button {
+        display: block;
+    }
+
+    .check[type="checkbox"] {
+        height: 20px;
+        margin-left: -138px;
+    }
+
+    .checkbox-form p {
+        margin-left: -155px;
+    }
+
+    .btn-sign-in {
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .form-sign-in {
+        padding: 50px;
+        padding-right: 20px;
+        box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.5);
+    }
+}
