@@ -1,0 +1,53 @@
+main {
+    margin-top: 70px;
+}
+.btn-sign-up{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 601px) {
+    main{
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .form-sign-up{
+        margin: 0 auto;
+    }
+    .form-sign-up form{
+        max-width: 600px;
+    }
+
+    .form-button button {
+        display: block;
+    }
+
+    .btn-pss-reverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .btn-sign-up{
+        margin-right: 160px;
+        margin-top: 10px;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .form-sign-up{
+        border: 2px solid black;
+        padding: 50px;
+        padding-right: 20px;
+    }
+    .form-sign-up form{
+        max-width: 600px;
+    }
+}
