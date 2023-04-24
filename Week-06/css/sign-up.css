@@ -32,6 +32,10 @@ main{
 
 @media only screen and (min-width: 601px) {
 
+    .form-sign-up{
+        margin: 8vh auto;
+    }
+
     .form-sign-up form {
         max-width: 600px;
         margin: 0 auto;

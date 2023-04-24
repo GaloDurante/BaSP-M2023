@@ -1,18 +1,40 @@
-//Alphanumeric validation
+function haveLetters(str){
+    var letter = "acbdefghijklmnopqrstuvwxyz";
+    var cont = 0;
+
+    for (var j = 0; j < letter.length; j++) {
+        if(str === letter.substring(j, j+1)){
+        cont++;
+        break;
+        }
+    }
+  return cont == str.length;
+}
+
+//validate if one position of the string match with a number and return a boolean
+function haveNumbers(str){
+    var letter = "0123456789";
+    var cont = 0;
+
+    for (var j = 0; j < letter.length; j++) {
+        if(str === letter.substring(j, j+1)){
+            cont++;
+            break;
+        }
+    }
+    return cont == str.length;
+}
+
+//validate if the string contain numbers and letters, and return a boolean
 function haveAlpha(str){
     var aux = str.toLowerCase();
-    var alpha = "acbdefghijklmnopqrstuvwxyz";
     var contL = 0, contN = 0;
 
     for (var i = 0; i < aux.length; i++) {
-        for (var j = 0; j < alpha.length; j++) {
-            if(aux.substring(i, i+1) === alpha.substring(j, j+1)){
-                contL++;
-                break;
-            }else if(!isNaN(aux.substring(i, i+1))){
-                contN++;
-                break;
-            }
+        if(haveLetters(aux.substring(i, i+1))){
+            contL++;
+        }else if(haveNumbers(aux.substring(i, i+1))){
+            contN++;
         }
     }
     if(contL > 0 && contN > 0){
@@ -22,15 +44,18 @@ function haveAlpha(str){
     }
 }
 
+//implements focus on any input
+function focus(input, msjP){
+    input.classList.remove("red");
+    msjP.textContent = "";
+}
+
 //Email validation
 var inputEmail = document.getElementById("email-sign-in");
 var msj = document.getElementById("error");
 
 inputEmail.addEventListener("blur", validateEmail);
-inputEmail.addEventListener("focus", function(){
-    inputEmail.classList.remove("red");
-    msj.textContent = "";
-});
+inputEmail.addEventListener("focus", function(){focus(inputEmail, msj)});
 
 function validateEmail(){
     var valorInput = inputEmail.value;
@@ -57,10 +82,7 @@ var inputPass = document.getElementById("password-sign-in");
 var msj2 = document.getElementById("error2");
 
 inputPass.addEventListener("blur", validatePass);
-inputPass.addEventListener("focus", function(){
-    inputPass.classList.remove("red");
-    msj2.textContent = "";
-});
+inputPass.addEventListener("focus", function(){focus(inputPass, msj2)});
 
 function validatePass(){
     var valorInput = inputPass.value;

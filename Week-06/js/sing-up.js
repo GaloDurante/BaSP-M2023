@@ -1,35 +1,67 @@
-//validate if the string contain only letters and return a boolean
+//validate if one position of the string match with a letter and return a boolean
 function haveLetters(str){
-  var aux = str.toLowerCase();
-  var letter = "acbdefghijklmnopqrstuvwxyz";
-  var cont = 0;
+    var letter = "acbdefghijklmnopqrstuvwxyz";
+    var cont = 0;
 
-  for (var i = 0; i < aux.length; i++) {
-      for (var j = 0; j < letter.length; j++) {
-          if(aux.substring(i, i+1) === letter.substring(j, j+1)){
+    for (var j = 0; j < letter.length; j++) {
+        if(str === letter.substring(j, j+1)){
+        cont++;
+        break;
+        }
+    }
+  return cont == str.length;
+}
+
+//validate if one position of the string match with a number and return a boolean
+function haveNumbers(str){
+    var letter = "0123456789";
+    var cont = 0;
+
+    for (var j = 0; j < letter.length; j++) {
+        if(str === letter.substring(j, j+1)){
             cont++;
             break;
-          }
-      }
-  }
-  return cont == aux.length;
+        }
+    }
+    return cont == str.length;
+}
+
+//validate if the string contain only letters and return a boolean
+function validateL(str){
+    var aux = str.toLowerCase();
+    var cont = 0;
+
+    for (var i = 0; i < aux.length; i++) {
+        if(haveLetters(aux.substring(i, i+1))){
+            cont++;
+        }
+    }
+    return cont == aux.length;
 }
 
 //validate if the string contain only numbers and return a boolean
+function validateL(str){
+    var aux = str.toLowerCase();
+    var cont = 0;
+
+    for (var i = 0; i < aux.length; i++) {
+        if(haveNumbers(aux.substring(i, i+1))){
+            cont++;
+        }
+    }
+    return cont == aux.length;
+}
+
+//validate if the string contain numbers and letters, and return a boolean
 function haveAlpha(str){
     var aux = str.toLowerCase();
-    var alpha = "acbdefghijklmnopqrstuvwxyz";
     var contL = 0, contN = 0;
 
     for (var i = 0; i < aux.length; i++) {
-        for (var j = 0; j < alpha.length; j++) {
-            if(aux.substring(i, i+1) === alpha.substring(j, j+1)){
-                contL++;
-                break;
-            }else if(!isNaN(aux.substring(i, i+1))){
-                contN++;
-                break;
-            }
+        if(haveLetters(aux.substring(i, i+1))){
+            contL++;
+        }else if(haveNumbers(aux.substring(i, i+1))){
+            contN++;
         }
     }
     if(contL > 0 && contN > 0){
@@ -39,79 +71,63 @@ function haveAlpha(str){
     }
 }
 
-//name validation
-var inputName = document.getElementById("name-sign-up");
-var msj = document.getElementById("error");
-
-inputName.addEventListener("blur", validateName);
-inputName.addEventListener("focus", function(){
-    inputName.classList.remove("red");
-    msj.textContent = "";
-});
-
-function validateName(){
-  var valorInput = inputName.value.trim();
-  var isValid = true;
-
-  if (!haveLetters(valorInput) || valorInput.length < 3) {
-    isValid = false;
-  }
-  if(valorInput == ""){
-    inputName.classList.add("red");
-    msj.textContent = "Field required";
-  }else if (isValid){
-    msj.textContent = "";
-    inputName.classList.remove("red");
-  } else {
-    inputName.classList.add("red");
-    msj.textContent = "Must contain only letters and 3 or more characteres";
-  }
+//implements focus on any input
+function focus(input, msjP){
+    input.classList.remove("red");
+    msjP.textContent = "";
 }
 
-//surname validation
+//Name and surname validations using the same function validateNameOrSurname
+var inputName = document.getElementById("name-sign-up");
+var msj = document.getElementById("error");
+inputName.addEventListener("blur", validateName);
+inputName.addEventListener("focus", function(){focus(inputName, msj)});
+
 var inputSurname = document.getElementById("surname-sign-up");
 var msj2 = document.getElementById("error2");
-
 inputSurname.addEventListener("blur", validateSurname);
-inputSurname.addEventListener("focus", function(){
-    inputSurname.classList.remove("red");
-    msj2.textContent = "";
-});
+inputSurname.addEventListener("focus", function(){focus(inputSurname, msj2)});
+
+function validateName(){
+    validateNameOrSurname(inputName, msj)
+}
 
 function validateSurname(){
-    var valorInput = inputSurname.value.trim();
+    validateNameOrSurname(inputSurname, msj2)
+}
+
+function validateNameOrSurname(input, msjP){
+    var valorInput = input.value.trim();
+    var aux = msjP;
     var isValid = true;
 
-    if (!haveLetters(valorInput) || valorInput.length < 3) {
+    if (!validateL(valorInput) || valorInput.length < 3) {
       isValid = false;
     }
     if(valorInput == ""){
-        inputSurname.classList.add("red");
-        msj2.textContent = "Field required";
+      input.classList.add("red");
+      aux.textContent = "Field required";
     }else if (isValid){
-        msj2.textContent = "";
-        inputSurname.classList.remove("red");
+      aux.textContent = "";
+      input.classList.remove("red");
     } else {
-      inputSurname.classList.add("red");
-      msj2.textContent = "Must contain only letters and 3 or more characteres";
+      input.classList.add("red");
+      aux.textContent = "Must contain only letters and 3 or more characteres";
     }
-}
+  }
 
 //DNI validation
 var inputDni = document.getElementById("dni");
 var msj3 = document.getElementById("error3");
 
 inputDni.addEventListener("blur", validateDni);
-inputDni.addEventListener("focus", function(){
-    inputDni.classList.remove("red");
-    msj3.textContent = "";
-});
+inputDni.addEventListener("focus", function(){focus(inputDni, msj3)});
 
 function validateDni(){
     var valorInput = inputDni.value;
     var isValid = true;
 
-    if((isNaN(valorInput)) || (valorInput.length < 7)){
+    if((!validateL(valorInput)) || (valorInput.length < 7)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -131,16 +147,13 @@ var inputPhone = document.getElementById("phone");
 var msj4 = document.getElementById("error4");
 
 inputPhone.addEventListener("blur", validatePhone);
-inputPhone.addEventListener("focus", function(){
-    inputPhone.classList.remove("red");
-    msj4.textContent = "";
-});
+inputPhone.addEventListener("focus", function(){focus(inputPhone, msj4)});
 
 function validatePhone(){
     var valorInput = inputPhone.value;
     var isValid = true;
 
-    if((isNaN(valorInput)) || (valorInput.length != 10)){
+    if((!validateL(valorInput)) || (valorInput.length != 10)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -160,10 +173,7 @@ var inputDate = document.getElementById("date-of-birth");
 var msjD = document.getElementById("errorD");
 
 inputDate.addEventListener("blur", validateDate);
-inputDate.addEventListener("focus", function(){
-    inputDate.classList.remove("red");
-    msjD.textContent = "";
-});
+inputDate.addEventListener("focus", function(){focus(inputDate, msjD)});
 
 function validateDate(){
     var valorInput = inputDate.value;
@@ -191,10 +201,7 @@ var inputAddress = document.getElementById("address");
 var msj5 = document.getElementById("error5");
 
 inputAddress.addEventListener("blur", validateAddress);
-inputAddress.addEventListener("focus", function(){
-    inputAddress.classList.remove("red");
-    msj5.textContent = "";
-});
+inputAddress.addEventListener("focus", function(){focus(inputAddress, msj5)});
 
 function validateAddress(){
     var valorInput = inputAddress.value;
@@ -220,10 +227,7 @@ var inputLocation = document.getElementById("location");
 var msj6 = document.getElementById("error6");
 
 inputLocation.addEventListener("blur", validateLocation);
-inputLocation.addEventListener("focus", function(){
-    inputLocation.classList.remove("red");
-    msj6.textContent = "";
-});
+inputLocation.addEventListener("focus", function(){focus(inputLocation, msj6)});
 
 function validateLocation(){
     var valorInput = inputLocation.value;
@@ -249,16 +253,13 @@ var inputPostal = document.getElementById("postal-code");
 var msj7 = document.getElementById("error7");
 
 inputPostal.addEventListener("blur", validatePostal);
-inputPostal.addEventListener("focus", function(){
-    inputPostal.classList.remove("red");
-    msj7.textContent = "";
-});
+inputPostal.addEventListener("focus", function(){focus(inputPostal, msj7)});
 
 function validatePostal(){
     var valorInput = inputPostal.value;
     var isValid = true;
 
-    if((isNaN(valorInput)) || (valorInput.length < 4 || valorInput.length > 5)){
+    if((!validateL(valorInput)) || (valorInput.length < 4 || valorInput.length > 5)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -269,7 +270,7 @@ function validatePostal(){
         inputPostal.classList.remove("red");
     } else {
         inputPostal.classList.add("red");
-        msj7.textContent = "Must contain at least one letter, one number and 3 or more characters";
+        msj7.textContent = "Must contain only numbers and between 4 or 5 characters";
     }
 }
 
@@ -278,10 +279,7 @@ var inputEmail = document.getElementById("email-sign-up");
 var msj8 = document.getElementById("error8");
 
 inputEmail.addEventListener("blur", validateEmail);
-inputEmail.addEventListener("focus", function(){
-    inputEmail.classList.remove("red");
-    msj8.textContent = "";
-});
+inputEmail.addEventListener("focus", function(){focus(inputEmail, msj8)});
 
 function validateEmail(){
     var valorInput = inputEmail.value;
@@ -308,10 +306,7 @@ var inputPass = document.getElementById("password");
 var msj9 = document.getElementById("error9");
 
 inputPass.addEventListener("blur", validatePass);
-inputPass.addEventListener("focus", function(){
-    inputPass.classList.remove("red");
-    msj9.textContent = "";
-});
+inputPass.addEventListener("focus", function(){focus(inputPass, msj9)});
 
 function validatePass(){
     var valorInput = inputPass.value;
@@ -337,10 +332,7 @@ var inputPassR = document.getElementById("password-repeat");
 var msj10 = document.getElementById("error10");
 
 inputPassR.addEventListener("blur", validatePassR);
-inputPassR.addEventListener("focus", function(){
-    inputPassR.classList.remove("red");
-    msj10.textContent = "";
-});
+inputPassR.addEventListener("focus", function(){focus(inputPassR, msj10)});
 
 function validatePassR(){
     var valorInput = inputPassR.value;
