@@ -52,3 +52,15 @@ p {
     cursor: pointer;
 }
 
+.error {
+    margin-top: 8px;
+    font-size: 15px;
+    max-width: 240px;
+    color: #ee2222;
+}
+
+.red {
+    border: 1px solid #ee2222;
+}
+
+

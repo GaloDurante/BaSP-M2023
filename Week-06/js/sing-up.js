@@ -40,7 +40,7 @@ function validateL(str){
 }
 
 //validate if the string contain only numbers and return a boolean
-function validateL(str){
+function validateN(str){
     var aux = str.toLowerCase();
     var cont = 0;
 
@@ -114,7 +114,7 @@ function validateNameOrSurname(input, msjP){
       input.classList.add("red");
       aux.textContent = "Must contain only letters and 3 or more characteres";
     }
-  }
+}
 
 //DNI validation
 var inputDni = document.getElementById("dni");
@@ -127,7 +127,7 @@ function validateDni(){
     var valorInput = inputDni.value;
     var isValid = true;
 
-    if((!validateL(valorInput)) || (valorInput.length < 7)){
+    if((!validateN(valorInput)) || (valorInput.length < 7)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -153,7 +153,7 @@ function validatePhone(){
     var valorInput = inputPhone.value;
     var isValid = true;
 
-    if((!validateL(valorInput)) || (valorInput.length != 10)){
+    if((!validateN(valorInput)) || (valorInput.length != 10)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -259,7 +259,7 @@ function validatePostal(){
     var valorInput = inputPostal.value;
     var isValid = true;
 
-    if((!validateL(valorInput)) || (valorInput.length < 4 || valorInput.length > 5)){
+    if((!validateN(valorInput)) || (valorInput.length < 4 || valorInput.length > 5)){
         isValid = false;
     }
     if(valorInput == ""){

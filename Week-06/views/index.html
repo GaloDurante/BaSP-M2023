@@ -178,21 +178,24 @@
                                 <label for="name">
                                     First name
                                 </label>
-                                <input id="name" type="text" placeholder="Enter name" required minlength="3">
+                                <input id="name-index" type="text" placeholder="Enter name">
+                                <div id="error" class="error" class="error"></div>
                             </div>
                             <div>
                                 <label for="surname">
                                     Last name
                                 </label>
-                                <input id="surname" type="text" placeholder="Enter last name" required minlength="3">
+                                <input id="surname-index" type="text" placeholder="Enter last name">
+                                <div id="error2" class="error" class="error"></div>
                             </div>
                             <div>
                                 <label for="email">
                                     Email address
                                 </label>
-                                <input id="email" type="email" placeholder="Enter email" required minlength="10">
+                                <input id="email-index" type="email" placeholder="Enter email">
+                                <div id="error3" class="error" class="error"></div>
                             </div>
-                            <button type="submit" class="button form-btn-1">
+                            <button type="button" id="send" class="button form-btn-1">
                                 Submit
                             </button>
                         </div>
@@ -201,7 +204,7 @@
                                 <label for="select">
                                     Contact reason
                                 </label>
-                                <select id="select" required>
+                                <select id="select">
                                     <option disabled selected>
                                         Choose contact reason
                                     </option>
@@ -215,15 +218,17 @@
                                         I want to know the memberships and cost
                                     </option>
                                 </select>
+                                <div id="error4" class="error" class="error"></div>
                             </div>
                             <div class="form-textarea">
                                 <label for="message">
                                     Message
                                 </label>
                                 <textarea id="message" placeholder="Enter your message"></textarea>
+                                <div id="error5" class="error" class="error"></div>
                             </div>
                             <div class="form-button">
-                                <button type="submit" class="button">
+                                <button type="button" id="send2" class="button send">
                                     Submit
                                 </button>
                             </div>
