@@ -185,6 +185,7 @@ function send(){
         alert("One of the inputs are incorrect, please try again");
     }else{
         alert("Name: "+inputName.value+"\nLast name: "+inputSurname.value+
-        "\nEmail: "+inputEmail.value+"\nContact reason: "+inputReason.value);
+        "\nEmail: "+inputEmail.value+"\nContact reason: "+inputReason.value+
+        "\nMsj: "+inputArea.value);
     }
 }

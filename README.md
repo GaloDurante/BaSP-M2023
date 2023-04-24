@@ -63,5 +63,17 @@ Summary:
 - Fill the README with the information
 - Push to github
 
+## Week 06
+On this week I made the validations of the forms on JavaScript.
+
+Summary:
+- Create the folder "Week-06"
+- Create and organize the folders on the project
+- Fill the requirements file for the inputs
+- Apply the requirements on the js files to implement the validations
+- Fill the README with the information
+- Push to github
+
+link to github page: https://galodurante.github.io/BaSP-M2023/Week-06/views/
 ## Author
 Galo Durante
