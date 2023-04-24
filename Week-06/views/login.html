@@ -66,6 +66,9 @@
     </aside>
     <div class="main-container">
         <main>
+            <a class="button back" href="index.html">
+                Back
+            </a>
             <section class="form-sign-in">
                 <h2>
                     Log in
@@ -75,13 +78,15 @@
                         <label for="email-sign-in">
                             Email
                         </label>
-                        <input id="Email-sign-in" type="text" placeholder="Enter email">
+                        <input id="email-sign-in" type="text" placeholder="Enter email">
+                        <div id="error" class="error" class="error"></div>
                     </div>
                     <div>
                         <label for="password-sign-in">
                             Password
                         </label>
-                        <input id="password-sign-in" type="text" placeholder="Enter password">
+                        <input id="password-sign-in" type="password" placeholder="Enter password">
+                        <div id="error2" class="error" class="error"></div>
                     </div>
                     <div class="checkbox-form">
                         <input type="checkbox" class="check">
@@ -95,27 +100,13 @@
                         </a>
                     </div>
                     <div class="form-button btn-sign-in">
-                        <button type="submit" class="button">
+                        <button type="button" class="button" id="btn">
                             Enter
                         </button>
                     </div>
                 </form>
             </section>
         </main>
-        <footer>
-            <a>
-                <img src="/assets/imgs/i-linkedin.svg">
-            </a>
-            <a>
-                <img src="/assets/imgs/i-facebook.svg">
-            </a>
-            <a>
-                <img src="/assets/imgs/i-instagram.svg">
-            </a>
-            <p>
-                Copyright &copy; 2023 Radium Rocket. All rights reserved.
-            </p>
-        </footer>
     </div>
     <script src="/Week-06/js/login.js"></script>
 </body>

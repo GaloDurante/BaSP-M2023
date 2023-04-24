@@ -58,7 +58,7 @@ function validateName(){
   }
   if(valorInput == ""){
     inputName.classList.add("red");
-    msj.textContent = "Fill this input";
+    msj.textContent = "Field required";
   }else if (isValid){
     msj.textContent = "";
     inputName.classList.remove("red");
@@ -87,7 +87,7 @@ function validateSurname(){
     }
     if(valorInput == ""){
         inputSurname.classList.add("red");
-        msj2.textContent = "Fill this input";
+        msj2.textContent = "Field required";
     }else if (isValid){
         msj2.textContent = "";
         inputSurname.classList.remove("red");
@@ -116,7 +116,7 @@ function validateDni(){
     }
     if(valorInput == ""){
         inputDni.classList.add("red");
-        msj3.textContent = "Fill this input";
+        msj3.textContent = "Field required";
     }else if (isValid){
         msj3.textContent = "";
         inputDni.classList.remove("red");
@@ -145,13 +145,44 @@ function validatePhone(){
     }
     if(valorInput == ""){
         inputPhone.classList.add("red");
-        msj4.textContent = "Fill this input";
+        msj4.textContent = "Field required";
     }else if (isValid){
         msj4.textContent = "";
         inputPhone.classList.remove("red");
     } else {
         inputPhone.classList.add("red");
         msj4.textContent = "Must contain only numbers and 10 characteres";
+    }
+}
+
+//Date validation
+var inputDate = document.getElementById("date-of-birth");
+var msjD = document.getElementById("errorD");
+
+inputDate.addEventListener("blur", validateDate);
+inputDate.addEventListener("focus", function(){
+    inputDate.classList.remove("red");
+    msjD.textContent = "";
+});
+
+function validateDate(){
+    var valorInput = inputDate.value;
+    var isValid = true;
+
+    if(valorInput == ""){
+        isValid = false;
+        inputDate.classList.add("red");
+        msjD.textContent = "Field required";
+    }else if(valorInput.substring(0,4) < 1930 || valorInput.substring(0,4) > 2010){
+        isValid = false;
+        inputDate.classList.add("red");
+        msjD.textContent = "Invalid date, try again";
+    }else if (isValid){
+        msjD.textContent = "";
+        inputDate.classList.remove("red");
+    } else {
+        inputDate.classList.add("red");
+        msjD.textContent = "Invalid date, try again.";
     }
 }
 
@@ -174,7 +205,7 @@ function validateAddress(){
     }
     if(valorInput == ""){
         inputAddress.classList.add("red");
-        msj5.textContent = "Fill this input";
+        msj5.textContent = "Field required";
     }else if (isValid){
         msj5.textContent = "";
         inputAddress.classList.remove("red");
@@ -203,7 +234,7 @@ function validateLocation(){
     }
     if(valorInput == ""){
         inputLocation.classList.add("red");
-        msj6.textContent = "Fill this input";
+        msj6.textContent = "Field required";
     }else if (isValid){
         msj6.textContent = "";
         inputLocation.classList.remove("red");
@@ -232,7 +263,7 @@ function validatePostal(){
     }
     if(valorInput == ""){
         inputPostal.classList.add("red");
-        msj7.textContent = "Fill this input";
+        msj7.textContent = "Field required";
     }else if (isValid){
         msj7.textContent = "";
         inputPostal.classList.remove("red");
@@ -262,7 +293,7 @@ function validateEmail(){
     }
     if(valorInput == ""){
         inputEmail.classList.add("red");
-        msj8.textContent = "Fill this input";
+        msj8.textContent = "Field required";
     }else if (isValid){
         msj8.textContent = "";
         inputEmail.classList.remove("red");
@@ -291,7 +322,7 @@ function validatePass(){
     }
     if(valorInput == ""){
         inputPass.classList.add("red");
-        msj9.textContent = "Fill this input";
+        msj9.textContent = "Field required";
     }else if (isValid){
         msj9.textContent = "";
         inputPass.classList.remove("red");
@@ -320,7 +351,7 @@ function validatePassR(){
     }
     if(valorInput == ""){
         inputPassR.classList.add("red");
-        msj10.textContent = "Fill this input";
+        msj10.textContent = "Field required";
     }else if (isValid){
         msj10.textContent = "";
         inputPassR.classList.remove("red");
@@ -336,13 +367,14 @@ register.addEventListener("click", send)
 function send(){
     if(inputName.classList.contains("red") || inputSurname.classList.contains("red")
     || inputDni.classList.contains("red") || inputPhone.classList.contains("red")
-    || inputAddress.classList.contains("red") || inputLocation.classList.contains("red")
-    || inputPostal.classList.contains("red") || inputEmail.classList.contains("red")
-    || inputPass.classList.contains("red") || inputPassR.classList.contains("red")){
+    || inputDate.classList.contains("red") || inputAddress.classList.contains("red")
+    || inputLocation.classList.contains("red") || inputPostal.classList.contains("red")
+    || inputEmail.classList.contains("red") || inputPass.classList.contains("red")
+    || inputPassR.classList.contains("red")){
         alert("One of the inputs are incorrect, please try again");
     }else{
         alert("Name: "+inputName.value+"\nSurname: "+inputSurname.value+"\nDNI: "+inputDni.value
-        +"\nPhone: "+inputPhone.value+"\nAddress: "+inputAddress.value+"\nLocation: "+inputLocation.value
-        +"\nPostal Code: "+inputPostal.value+"\nEmail: "+inputEmail.value);
+        +"\nPhone: "+inputPhone.value+"\nDate of birth: "+inputDate.value+"\nAddress: "+inputAddress.value
+        +"\nLocation: "+inputLocation.value+"\nPostal Code: "+inputPostal.value+"\nEmail: "+inputEmail.value);
     }
 }

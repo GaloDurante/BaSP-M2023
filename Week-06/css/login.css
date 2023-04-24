@@ -1,13 +1,20 @@
-
 main {
+    margin-top: 90px;
+}
+.form-sign-in {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
-    height: 85vh;
+}
+
+.back{
+    margin-left: 10px;
+    text-decoration: none;
 }
 
 .form-sign-in h2 {
+    margin-top: 200px;
     text-decoration: none;
 }
 
@@ -23,6 +30,7 @@ form {
 .check[type="checkbox"] {
     height: 20px;
     margin-left: -290px;
+    accent-color: #aace9b;
 }
 
 .checkbox-form p {
@@ -39,9 +47,24 @@ form {
     text-decoration: none;
 }
 
+.forgot-sing-in a:hover{
+    color: #aace9b;
+}
+
 .btn-sign-in {
     display: flex;
     justify-content: center;
+}
+
+.error{
+    margin-top: 8px;
+    font-size: 15px;
+    max-width: 240px;
+    color: #ee2222;
+}
+
+.red{
+    border: 1px solid #ee2222;
 }
 
 @media only screen and (min-width: 601px) {
@@ -69,7 +92,6 @@ form {
     .check[type="checkbox"] {
         height: 20px;
         margin-left: -138px;
-        accent-color: #aace9b;
     }
 
     .checkbox-form p {
@@ -82,13 +104,21 @@ form {
 }
 
 @media only screen and (min-width: 1025px) {
-    .form-sign-in {
-        padding: 50px;
-        padding-right: 20px;
-        box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.5);
+    main{
+        margin-top: 0px;
     }
 
-    main{
-        margin-top: 60px;
+    .back{
+        display: none;
+    }
+
+    .form-sign-in h2 {
+        margin-top: 20px;
+    }
+    .form-sign-in {
+        max-width: 400px;
+        margin-top: 150px;
+        padding-left: 30px;
+        box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.5);
     }
 }
