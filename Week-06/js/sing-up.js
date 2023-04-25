@@ -1,15 +1,18 @@
 //validate if one position of the string match with a letter and return a boolean
 function haveLetters(str){
+    var strM = str.toLowerCase();
     var letter = "acbdefghijklmnopqrstuvwxyz";
     var cont = 0;
 
-    for (var j = 0; j < letter.length; j++) {
-        if(str === letter.substring(j, j+1)){
-        cont++;
-        break;
+    for (var i = 0; i < strM.length; i++) {
+        for (var j = 0; j < letter.length; j++) {
+            if(strM.substring(i, i+1) === letter.substring(j, j+1)){
+                cont++;
+                break;
+            }
         }
     }
-  return cont == str.length;
+    return cont == strM.length;
 }
 
 //validate if one position of the string match with a number and return a boolean
@@ -17,48 +20,39 @@ function haveNumbers(str){
     var letter = "0123456789";
     var cont = 0;
 
-    for (var j = 0; j < letter.length; j++) {
-        if(str === letter.substring(j, j+1)){
-            cont++;
-            break;
+    for (var i = 0; i < str.length; i++) {
+        for (var j = 0; j < letter.length; j++) {
+            if(str.substring(i, i+1) === letter.substring(j, j+1)){
+                cont++;
+                break;
+            }
         }
     }
     return cont == str.length;
 }
 
-//validate if the string contain only letters and return a boolean
-function validateL(str){
-    var aux = str.toLowerCase();
-    var cont = 0;
-
-    for (var i = 0; i < aux.length; i++) {
-        if(haveLetters(aux.substring(i, i+1))){
-            cont++;
-        }
-    }
-    return cont == aux.length;
-}
-
-//validate if the string contain only numbers and return a boolean
-function validateN(str){
-    var aux = str.toLowerCase();
-    var cont = 0;
-
-    for (var i = 0; i < aux.length; i++) {
-        if(haveNumbers(aux.substring(i, i+1))){
-            cont++;
-        }
-    }
-    return cont == aux.length;
-}
-
-//validate if the string contain numbers and letters, and return a boolean
+//validate if the string contain numbers, letters, and return a boolean
 function haveAlpha(str){
     var aux = str.toLowerCase();
     var contL = 0, contN = 0;
 
     for (var i = 0; i < aux.length; i++) {
-        if(haveLetters(aux.substring(i, i+1))){
+        if(haveLetters(aux.substring(i, i+1)) || aux.substring(i, i+1) == " "){
+            contL++;
+        }else if(haveNumbers(aux.substring(i, i+1))){
+            contN++;
+        }
+    }
+    return (contN + contL) == aux.length;
+}
+
+//validate if the string contain numbers and letters, and return a boolean
+function haveAlphaP(str){
+    var aux = str.toLowerCase();
+    var contL = 0, contN = 0;
+
+    for (var i = 0; i < aux.length; i++) {
+        if(haveLetters(aux.substring(i, i+1)) || aux.substring(i, i+1) == " "){
             contL++;
         }else if(haveNumbers(aux.substring(i, i+1))){
             contN++;
@@ -101,7 +95,7 @@ function validateNameOrSurname(input, msjP){
     var aux = msjP;
     var isValid = true;
 
-    if (!validateL(valorInput) || valorInput.length < 3) {
+    if (!haveLetters(valorInput) || valorInput.length < 3) {
       isValid = false;
     }
     if(valorInput == ""){
@@ -127,7 +121,7 @@ function validateDni(){
     var valorInput = inputDni.value;
     var isValid = true;
 
-    if((!validateN(valorInput)) || (valorInput.length < 7)){
+    if((!haveNumbers(valorInput)) || (valorInput.length < 7)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -153,7 +147,7 @@ function validatePhone(){
     var valorInput = inputPhone.value;
     var isValid = true;
 
-    if((!validateN(valorInput)) || (valorInput.length != 10)){
+    if((!haveNumbers(valorInput)) || (valorInput.length != 10)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -207,7 +201,7 @@ function validateAddress(){
     var valorInput = inputAddress.value;
     var isValid = true;
 
-    if(!haveAlpha(valorInput) || (valorInput.length < 5) || (valorInput.indexOf(" ") < 3)){
+    if(!haveAlphaP(valorInput) || (valorInput.length < 5) || valorInput.indexOf(" ") < 3){
         isValid = false;
     }
     if(valorInput == ""){
@@ -218,7 +212,7 @@ function validateAddress(){
         inputAddress.classList.remove("red");
     } else {
         inputAddress.classList.add("red");
-        msj5.textContent = "Must contain at least one letter, one number, one space and 5 or more characters";
+        msj5.textContent = "Must contain 5 or more characters and a valid address format";
     }
 }
 
@@ -244,7 +238,7 @@ function validateLocation(){
         inputLocation.classList.remove("red");
     } else {
         inputLocation.classList.add("red");
-        msj6.textContent = "Must contain at least one letter, one number and 3 or more characters";
+        msj6.textContent = "Must contain 3 or more characters";
     }
 }
 
@@ -259,7 +253,7 @@ function validatePostal(){
     var valorInput = inputPostal.value;
     var isValid = true;
 
-    if((!validateN(valorInput)) || (valorInput.length < 4 || valorInput.length > 5)){
+    if((!haveNumbers(valorInput)) || (valorInput.length < 4 || valorInput.length > 5)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -312,7 +306,7 @@ function validatePass(){
     var valorInput = inputPass.value;
     var isValid = true;
 
-    if(!haveAlpha(valorInput) || (valorInput.length < 8)){
+    if(!haveAlphaP(valorInput) || (valorInput.length < 8)){
         isValid = false;
     }
     if(valorInput == ""){
@@ -367,6 +361,7 @@ function send(){
     }else{
         alert("Name: "+inputName.value+"\nSurname: "+inputSurname.value+"\nDNI: "+inputDni.value
         +"\nPhone: "+inputPhone.value+"\nDate of birth: "+inputDate.value+"\nAddress: "+inputAddress.value
-        +"\nLocation: "+inputLocation.value+"\nPostal Code: "+inputPostal.value+"\nEmail: "+inputEmail.value);
+        +"\nLocation: "+inputLocation.value+"\nPostal Code: "+inputPostal.value+"\nEmail: "+inputEmail.value
+        +"\nPassword: "+inputPass.value+"\nRepeat Password: "+inputPassR.value);
     }
 }

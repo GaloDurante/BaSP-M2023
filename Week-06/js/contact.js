@@ -1,15 +1,18 @@
 //validate if one position of the string match with a letter and return a boolean
 function haveLetters(str){
+    var strM = str.toLowerCase();
     var letter = "acbdefghijklmnopqrstuvwxyz";
     var cont = 0;
 
-    for (var j = 0; j < letter.length; j++) {
-        if(str === letter.substring(j, j+1)){
-        cont++;
-        break;
+    for (var i = 0; i < strM.length; i++) {
+        for (var j = 0; j < letter.length; j++) {
+            if(strM.substring(i, i+1) === letter.substring(j, j+1)){
+                cont++;
+                break;
+            }
         }
     }
-  return cont == str.length;
+    return cont == strM.length;
 }
 
 //validate if one position of the string match with a number and return a boolean
@@ -17,26 +20,15 @@ function haveNumbers(str){
     var letter = "0123456789";
     var cont = 0;
 
-    for (var j = 0; j < letter.length; j++) {
-        if(str === letter.substring(j, j+1)){
-            cont++;
-            break;
+    for (var i = 0; i < str.length; i++) {
+        for (var j = 0; j < letter.length; j++) {
+            if(str.substring(i, i+1) === letter.substring(j, j+1)){
+                cont++;
+                break;
+            }
         }
     }
     return cont == str.length;
-}
-
-//validate if the string contain only letters and return a boolean
-function validateL(str){
-    var aux = str.toLowerCase();
-    var cont = 0;
-
-    for (var i = 0; i < aux.length; i++) {
-        if(haveLetters(aux.substring(i, i+1))){
-            cont++;
-        }
-    }
-    return cont == aux.length;
 }
 
 //validate if the string contain numbers and letters, and return a boolean
@@ -51,11 +43,7 @@ function haveAlpha(str){
             contN++;
         }
     }
-    if(contL > 0 && contN > 0){
-        return (contN + contL) == aux.length;
-    }else{
-        return false;
-    }
+    return (contN + contL) == aux.length;
 }
 
 //implements focus on any input
@@ -88,7 +76,7 @@ function validateNameOrSurname(input, msjP){
     var aux = msjP;
     var isValid = true;
 
-    if (!validateL(valorInput) || valorInput.length < 3) {
+    if (!haveLetters(valorInput) || valorInput.length < 3) {
       isValid = false;
     }
     if(valorInput == ""){
@@ -158,7 +146,7 @@ function validateArea(){
     var valorInput = inputArea.value;
     var isValid = true;
 
-    if(((!haveAlpha(valorInput)) && (!validateL(valorInput))) || (valorInput.length < 3)){
+    if((!haveAlpha(valorInput) || (valorInput.length < 3))){
         isValid = false;
     }
     if(valorInput == ""){

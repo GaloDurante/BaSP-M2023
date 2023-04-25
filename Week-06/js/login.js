@@ -1,14 +1,18 @@
+//validate if one position of the string match with a letter and return a boolean
 function haveLetters(str){
+    var strM = str.toLowerCase();
     var letter = "acbdefghijklmnopqrstuvwxyz";
     var cont = 0;
 
-    for (var j = 0; j < letter.length; j++) {
-        if(str === letter.substring(j, j+1)){
-        cont++;
-        break;
+    for (var i = 0; i < strM.length; i++) {
+        for (var j = 0; j < letter.length; j++) {
+            if(strM.substring(i, i+1) === letter.substring(j, j+1)){
+                cont++;
+                break;
+            }
         }
     }
-  return cont == str.length;
+    return cont == strM.length;
 }
 
 //validate if one position of the string match with a number and return a boolean
@@ -16,10 +20,12 @@ function haveNumbers(str){
     var letter = "0123456789";
     var cont = 0;
 
-    for (var j = 0; j < letter.length; j++) {
-        if(str === letter.substring(j, j+1)){
-            cont++;
-            break;
+    for (var i = 0; i < str.length; i++) {
+        for (var j = 0; j < letter.length; j++) {
+            if(str.substring(i, i+1) === letter.substring(j, j+1)){
+                cont++;
+                break;
+            }
         }
     }
     return cont == str.length;
