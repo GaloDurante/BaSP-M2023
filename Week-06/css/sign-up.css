@@ -20,6 +20,7 @@ main{
 }
 
 .error{
+    height: 8px;
     margin-top: 8px;
     font-size: 15px;
     max-width: 240px;
