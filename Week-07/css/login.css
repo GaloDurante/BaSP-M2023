@@ -1,0 +1,125 @@
+main {
+    margin-top: 90px;
+}
+.form-sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back{
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.form-sign-in h2 {
+    margin-top: 10vh;
+    text-decoration: none;
+}
+
+form {
+    flex-direction: column;
+}
+
+.checkbox-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.check[type="checkbox"] {
+    height: 20px;
+    margin-left: -290px;
+    accent-color: #aace9b;
+}
+
+.checkbox-form p {
+    height: 20px;
+    margin-top: 3px;
+    margin-left: -130px;
+}
+
+.forgot-sing-in {
+    margin: 20vh auto 0vh;
+}
+
+.forgot-sing-in a {
+    text-decoration: none;
+}
+
+.forgot-sing-in a:hover{
+    color: #aace9b;
+}
+
+.btn-sign-in {
+    display: flex;
+    justify-content: center;
+}
+
+.error{
+    height: 20px;
+    margin-top: 8px;
+    font-size: 15px;
+    max-width: 240px;
+    color: #ee2222;
+}
+
+.red{
+    border: 1px solid #ee2222;
+}
+
+@media only screen and (min-width: 601px) {
+
+    .form-sign-in h2 {
+        margin-left: -20px;
+    }
+
+    .form-sign-in {
+        margin: 0 auto;
+    }
+
+    .form-sign-in input {
+        width: 300px;
+    }
+
+    .form-sign-in form {
+        max-width: 600px;
+    }
+
+    .form-button button {
+        display: block;
+    }
+
+    .check[type="checkbox"] {
+        height: 20px;
+        margin-left: -138px;
+    }
+
+    .checkbox-form p {
+        margin-left: -155px;
+    }
+
+    .btn-sign-in {
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    main{
+        margin-top: 0px;
+    }
+
+    .back{
+        display: none;
+    }
+
+    .form-sign-in h2 {
+        margin-top: 20px;
+    }
+    .form-sign-in {
+        max-width: 400px;
+        margin-top: 150px;
+        padding-left: 30px;
+        box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.5);
+    }
+}

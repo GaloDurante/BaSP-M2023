@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/aside.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="../../assets/imgs/logo-mega-rocket.png" alt="logo mega rocket"/>
+        <img class="header-img-menu" src="../../assets/imgs/I-menu.png">
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a class="btn" href="index.html">
+                        <img class="nav-img" src="../../assets/imgs/i-home.svg">Home
+                    </a>
+                </li>
+                <li>
+                    <a class="btn" href="sign-up.html">
+                        <img class="nav-img" src="../../assets/imgs/i-sign-up.svg">Sign Up
+                    </a>
+                </li>
+                <li>
+                    <a class="btn" href="login.html">
+                        <img class="nav-img" src="../../assets/imgs/i-sign-in.svg">Sign In
+                    </a>
+                </li>
+              </ul>
+         </nav>
+         <article>
+            <h2>
+                Contact information
+            </h2>
+            <ul class="aside-ul">
+                <li>
+                    <img class="nav-img" src="../../assets/imgs/i-mail.svg">
+                    <a>
+                        information@intitled.tld
+                    </a>
+                </li>
+                <li>
+                    <img class="nav-img nav-img-phone" src="../../assets/imgs/i-phone.svg">
+                    <a>
+                        (000) 000-0000
+                    </a>
+                </li>
+                <li>
+                    <img class="nav-img" src="../../assets/imgs/i-home.svg">
+                    <a>
+                        1234 Somewhere Road #8254 Nashvolle, TN
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </aside>
+    <div class="main-container">
+        <main>
+            <a class="button back" href="index.html">
+                Back
+            </a>
+            <section class="form-sign-in">
+                <h2>
+                    Log in
+                </h2>
+                <form>
+                    <div>
+                        <label for="email-sign-in">
+                            Email
+                        </label>
+                        <input id="email-sign-in" type="text" placeholder="Enter email">
+                        <div id="error" class="error" class="error"></div>
+                    </div>
+                    <div>
+                        <label for="password-sign-in">
+                            Password
+                        </label>
+                        <input id="password-sign-in" type="password" placeholder="Enter password">
+                        <div id="error2" class="error" class="error"></div>
+                    </div>
+                    <div class="checkbox-form">
+                        <input type="checkbox" class="check">
+                        <p>
+                            Remember me
+                        </p>
+                    </div>
+                    <div class="forgot-sing-in">
+                        <a href="#">
+                            Forgot your password?
+                        </a>
+                    </div>
+                    <div class="form-button btn-sign-in">
+                        <button type="button" class="button" id="btn">
+                            Enter
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

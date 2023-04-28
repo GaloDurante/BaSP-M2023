@@ -1,0 +1,57 @@
+aside {
+    display: none;
+  }
+
+@media only screen and (min-width: 1025px){
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 70px;
+        width: 300px;
+        height: 93%;
+        padding: 30px;
+        background-color: #AACE9B;
+      }
+
+    nav ul li {
+        margin-bottom: 10px;
+        list-style: none;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        display: flex;
+    }
+
+    aside article h2 {
+        text-align: center;
+        color: #fff;
+        text-decoration-color: #fff;
+        font-size: 22px;
+    }
+
+    .aside-ul{
+        display: block;
+    }
+
+    aside article ul li {
+        display: flex;
+        padding-top: 25px;
+        color: #373867;
+        list-style: none;
+        font-size: 20px;
+    }
+
+    .aside-ul a {
+        margin-left: 10px;
+    }
+
+    .nav-img-phone{
+        margin-left: -5px;
+    }
+}
