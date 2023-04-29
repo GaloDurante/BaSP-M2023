@@ -376,17 +376,24 @@ function send(){
                 return response.json();
             })
             .then(function (data) {
-                alert("Name: "+data.data.name+"\nSurname: "+data.data.lastName+"\nDNI: "+data.data.dni
-                +"\nDate of birth: "+data.data.dob+"\nPhone: "+data.data.phone+"\nAddress: "+data.data.address
-                +"\nCity: "+data.data.city+"\nPostal code: "+data.data.zip+"\nEmail: "+data.data.email
+                alert("Name: "+data.data.name
+                +"\nSurname: "+data.data.lastName
+                +"\nDNI: "+data.data.dni
+                +"\nDate of birth: "+data.data.dob
+                +"\nPhone: "+data.data.phone
+                +"\nAddress: "+data.data.address
+                +"\nCity: "+data.data.city
+                +"\nPostal code: "+data.data.zip
+                +"\nEmail: "+data.data.email
                 +"\nPassword: "+data.data.password);
+                createLocalStorage()
             })
             .catch(function () {
                 alert("error");
             });
     }
 }
-/*
+
 function createLocalStorage() {
     localStorage.setItem("name", inputName.value);
     localStorage.setItem("lastName", inputSurname.value);
@@ -400,16 +407,3 @@ function createLocalStorage() {
     localStorage.setItem("password", inputPass.value);
 }
 
-
-function removeLocalStorage(){
-    localStorage.removeItem("name");
-    localStorage.removeItem("lastName");
-    localStorage.removeItem("dni");
-    localStorage.removeItem("dob");
-    localStorage.removeItem("phone");
-    localStorage.removeItem("address");
-    localStorage.removeItem("city");
-    localStorage.removeItem("zip");
-    localStorage.removeItem("email");
-    localStorage.removeItem("password");
-}*/
