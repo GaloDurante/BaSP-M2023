@@ -365,10 +365,7 @@ function send(){
     || inputPassR.classList.contains("red")){
         alert("One of the inputs are incorrect, please try again");
     }else{
-        /*alert("Name: "+inputName.value+"\nSurname: "+inputSurname.value+"\nDNI: "+inputDni.value
-        +"\nPhone: "+inputPhone.value+"\nDate of birth: "+inputDate.value+"\nAddress: "+inputAddress.value
-        +"\nLocation: "+inputLocation.value+"\nPostal Code: "+inputPostal.value+"\nEmail: "+inputEmail.value
-        +"\nPassword: "+inputPass.value+"\nRepeat Password: "+inputPassR.value);*/
+
         var url = "https://api-rest-server.vercel.app/signup?name="+inputName.value+"&lastName="+inputSurname.value
         +"&dni="+inputDni.value+"&dob="+newDateF+"&phone="+inputPhone.value+"&address="+inputAddress.value
         +"&city="+inputLocation.value+"&zip="+inputPostal.value+"&email="+inputEmail.value
@@ -379,10 +376,40 @@ function send(){
                 return response.json();
             })
             .then(function (data) {
-                console.log(data.data.address);
+                alert("Name: "+data.data.name+"\nSurname: "+data.data.lastName+"\nDNI: "+data.data.dni
+                +"\nDate of birth: "+data.data.dob+"\nPhone: "+data.data.phone+"\nAddress: "+data.data.address
+                +"\nCity: "+data.data.city+"\nPostal code: "+data.data.zip+"\nEmail: "+data.data.email
+                +"\nPassword: "+data.data.password);
             })
             .catch(function () {
                 alert("error");
             });
     }
 }
+/*
+function createLocalStorage() {
+    localStorage.setItem("name", inputName.value);
+    localStorage.setItem("lastName", inputSurname.value);
+    localStorage.setItem("dni", inputDni.value);
+    localStorage.setItem("dob", newDateF);
+    localStorage.setItem("phone", inputPhone.value);
+    localStorage.setItem("address", inputAddress.value);
+    localStorage.setItem("city", inputLocation.value);
+    localStorage.setItem("zip", inputPostal.value);
+    localStorage.setItem("email", inputEmail.value);
+    localStorage.setItem("password", inputPass.value);
+}
+
+
+function removeLocalStorage(){
+    localStorage.removeItem("name");
+    localStorage.removeItem("lastName");
+    localStorage.removeItem("dni");
+    localStorage.removeItem("dob");
+    localStorage.removeItem("phone");
+    localStorage.removeItem("address");
+    localStorage.removeItem("city");
+    localStorage.removeItem("zip");
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+}*/
