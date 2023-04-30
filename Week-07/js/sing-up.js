@@ -357,25 +357,18 @@ var register = document.getElementById("btn");
 register.addEventListener("click", send)
 
 function send(){
-    if(inputName.classList.contains("red") || inputSurname.classList.contains("red")
-    || inputDni.classList.contains("red") || inputPhone.classList.contains("red")
-    || inputDate.classList.contains("red") || inputAddress.classList.contains("red")
-    || inputLocation.classList.contains("red") || inputPostal.classList.contains("red")
-    || inputEmail.classList.contains("red") || inputPass.classList.contains("red")
-    || inputPassR.classList.contains("red")){
-        alert("One of the inputs are incorrect, please try again");
-    }else{
+    var url = "https://api-rest-server.vercel.app/signup?name="+inputName.value+"&lastName="+inputSurname.value
+    +"&dni="+inputDni.value+"&dob="+newDateF+"&phone="+inputPhone.value+"&address="+inputAddress.value
+    +"&city="+inputLocation.value+"&zip="+inputPostal.value+"&email="+inputEmail.value
+    +"&password="+inputPass.value;
 
-        var url = "https://api-rest-server.vercel.app/signup?name="+inputName.value+"&lastName="+inputSurname.value
-        +"&dni="+inputDni.value+"&dob="+newDateF+"&phone="+inputPhone.value+"&address="+inputAddress.value
-        +"&city="+inputLocation.value+"&zip="+inputPostal.value+"&email="+inputEmail.value
-        +"&password="+inputPass.value;
-
-        fetch(url)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+            if(data.success){
                 alert("Name: "+data.data.name
                 +"\nSurname: "+data.data.lastName
                 +"\nDNI: "+data.data.dni
@@ -386,11 +379,41 @@ function send(){
                 +"\nPostal code: "+data.data.zip
                 +"\nEmail: "+data.data.email
                 +"\nPassword: "+data.data.password);
-                createLocalStorage()
-            })
-            .catch(function () {
-                alert("error");
-            });
+                createLocalStorage();
+            }else{
+                var aux = "Error:\n";
+                data.errors.forEach( function(error){
+                    aux += error.msg+"\n";
+                });
+                alert(aux);
+            }
+        })
+        .catch(function () {
+            alert("error");
+        });
+    }
+
+
+document.addEventListener("DOMContentLoaded", loadData);
+function loadData(){
+    inputName.value = localStorage.getItem("name");
+    inputSurname.value = localStorage.getItem("lastName");
+    inputDni.value = localStorage.getItem("dni");
+    inputDate.value = changeDateFormatToForm(localStorage.getItem("dob"));
+    inputPhone.value = localStorage.getItem("phone");
+    inputAddress.value = localStorage.getItem("address");
+    inputLocation.value = localStorage.getItem("city");
+    inputPostal.value = localStorage.getItem("zip");
+    inputEmail.value = localStorage.getItem("email");
+    inputPass.value = localStorage.getItem("password");
+}
+
+function changeDateFormatToForm(val){
+    if(val == null){
+        return "";
+    }else{
+        newStr = val.substring(6,10)+"-"+val.substring(0,2)+"-"+val.substring(3,5);
+        return newStr;
     }
 }
 

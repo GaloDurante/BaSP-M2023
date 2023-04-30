@@ -113,20 +113,27 @@ var register = document.getElementById("btn");
 register.addEventListener("click", send)
 
 function send(){
-    if(inputEmail.classList.contains("red") || inputPass.classList.contains("red")){
+    /*if(inputEmail.classList.contains("red") || inputPass.classList.contains("red")){
         alert("One of the inputs are incorrect, please try again");
-    }else{
-        var url = "https://api-rest-server.vercel.app/login?email="+inputEmail.value+"&password="+inputPass.value;
+    }else{*/
+    var url = "https://api-rest-server.vercel.app/login?email="+inputEmail.value+"&password="+inputPass.value;
 
-        fetch(url)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            if(data.success){
                 alert(data.msg);
-            })
-            .catch(function () {
-                alert("error");
-            });
-    }
+            }else{
+                var aux = "Error:\n";
+                data.errors.forEach( function(error){
+                    aux += error.msg+"\n";
+                });
+                alert(aux);
+            }
+        })
+        .catch(function () {
+            alert("Error");
+        });
 }
