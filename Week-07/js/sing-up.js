@@ -363,7 +363,7 @@ function send(){
     || inputDate.classList.contains("red") || inputAddress.classList.contains("red")
     || inputLocation.classList.contains("red") || inputPostal.classList.contains("red")
     || inputEmail.classList.contains("red") || inputPass.classList.contains("red")
-    || inputPassR.classList.contains("red")){
+    || inputPassR.classList.contains("red")|| inputPassR.value != inputPass.value){
         alert("One of the inputs are incorrect, please try again");
     }else{
         newDateF = changeDateFormat(inputDate.value);

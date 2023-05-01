@@ -51,6 +51,8 @@ Summary:
 - Fill the README with the information
 - Push to github
 
+[Repository](https://galodurante.github.io/BaSP-M2023/Week-04/)
+
 ## Week 05
 On this week I made the exercises on JavaScript.
 
@@ -63,6 +65,8 @@ Summary:
 - Fill the README with the information
 - Push to github
 
+[Repository](https://galodurante.github.io/BaSP-M2023/Week-05/)
+
 ## Week 06
 On this week I made the validations of the forms on JavaScript.
 
@@ -74,6 +78,22 @@ Summary:
 - Fill the README with the information
 - Push to github
 
-link to github page: https://galodurante.github.io/BaSP-M2023/Week-06/views/
+[Repository](https://galodurante.github.io/BaSP-M2023/Week-06/views/)
+
+## Week 07
+On this week I sent all the information on the form through a HTTP request.
+
+Summary:
+- Create the folder "Week-07"
+- Create and organize the folders on the project
+- Start the code on Js
+- Connect the validations with the API
+- Apply the corrections of the previous week
+- Finish the problem
+- Fill the README with the information
+- Push to github
+
+[Repository](https://galodurante.github.io/BaSP-M2023/Week-07/views/)
+
 ## Author
 Galo Durante
