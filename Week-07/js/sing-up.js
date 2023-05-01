@@ -355,46 +355,55 @@ function validatePassR(){
 
 var register = document.getElementById("btn");
 register.addEventListener("click", send)
+document.addEventListener("DOMContentLoaded", loadData);
 
 function send(){
-    var url = "https://api-rest-server.vercel.app/signup?name="+inputName.value+"&lastName="+inputSurname.value
-    +"&dni="+inputDni.value+"&dob="+newDateF+"&phone="+inputPhone.value+"&address="+inputAddress.value
-    +"&city="+inputLocation.value+"&zip="+inputPostal.value+"&email="+inputEmail.value
-    +"&password="+inputPass.value;
+    if(inputName.classList.contains("red") || inputSurname.classList.contains("red")
+    || inputDni.classList.contains("red") || inputPhone.classList.contains("red")
+    || inputDate.classList.contains("red") || inputAddress.classList.contains("red")
+    || inputLocation.classList.contains("red") || inputPostal.classList.contains("red")
+    || inputEmail.classList.contains("red") || inputPass.classList.contains("red")
+    || inputPassR.classList.contains("red")){
+        alert("One of the inputs are incorrect, please try again");
+    }else{
+        newDateF = changeDateFormat(inputDate.value);
+        var url = "https://api-rest-server.vercel.app/signup?name="+inputName.value+"&lastName="+inputSurname.value
+        +"&dni="+inputDni.value+"&dob="+newDateF+"&phone="+inputPhone.value+"&address="+inputAddress.value
+        +"&city="+inputLocation.value+"&zip="+inputPostal.value+"&email="+inputEmail.value
+        +"&password="+inputPass.value;
 
-    fetch(url)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data)
-            if(data.success){
-                alert("Name: "+data.data.name
-                +"\nSurname: "+data.data.lastName
-                +"\nDNI: "+data.data.dni
-                +"\nDate of birth: "+data.data.dob
-                +"\nPhone: "+data.data.phone
-                +"\nAddress: "+data.data.address
-                +"\nCity: "+data.data.city
-                +"\nPostal code: "+data.data.zip
-                +"\nEmail: "+data.data.email
-                +"\nPassword: "+data.data.password);
-                createLocalStorage();
-            }else{
-                var aux = "Error:\n";
-                data.errors.forEach( function(error){
-                    aux += error.msg+"\n";
-                });
-                alert(aux);
-            }
-        })
-        .catch(function () {
-            alert("error");
-        });
+        fetch(url)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data)
+                if(data.success){
+                    alert("Name: "+data.data.name
+                    +"\nSurname: "+data.data.lastName
+                    +"\nDNI: "+data.data.dni
+                    +"\nDate of birth: "+data.data.dob
+                    +"\nPhone: "+data.data.phone
+                    +"\nAddress: "+data.data.address
+                    +"\nCity: "+data.data.city
+                    +"\nPostal code: "+data.data.zip
+                    +"\nEmail: "+data.data.email
+                    +"\nPassword: "+data.data.password);
+                    createLocalStorage();
+                }else{
+                    var aux = "Error:\n";
+                    data.errors.forEach( function(error){
+                        aux += error.msg+"\n";
+                    });
+                    alert(aux);
+                }
+            })
+            .catch(function () {
+                alert("error");
+            });
     }
+}
 
-
-document.addEventListener("DOMContentLoaded", loadData);
 function loadData(){
     inputName.value = localStorage.getItem("name");
     inputSurname.value = localStorage.getItem("lastName");
@@ -406,6 +415,7 @@ function loadData(){
     inputPostal.value = localStorage.getItem("zip");
     inputEmail.value = localStorage.getItem("email");
     inputPass.value = localStorage.getItem("password");
+    inputPassR.value = localStorage.getItem("password");
 }
 
 function changeDateFormatToForm(val){
