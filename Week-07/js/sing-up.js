@@ -398,8 +398,8 @@ function send(){
                     alert(aux);
                 }
             })
-            .catch(function () {
-                alert("error");
+            .catch(function (error) {
+                alert("error: "+error);
             });
     }
 }

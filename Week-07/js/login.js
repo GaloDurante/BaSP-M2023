@@ -138,8 +138,8 @@ function send(){
                     }
                 }
             })
-            .catch(function () {
-                alert("Error");
+            .catch(function (error) {
+                alert("Error: "+error);
             });
     }
 }
